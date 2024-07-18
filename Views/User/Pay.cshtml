@@ -1,0 +1,49 @@
+﻿@model EducationalPlatform1._0.Models.ViewModels.PaymentViewModel
+{
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="~/css/payment.css" />
+</head>
+<body>
+    <div class="loader"></div>
+    <div class="hidden">
+        <div class="container">
+            <h1>Secure Payment</h1>
+            <div class="credit-card">
+                <img src="~/images/payment.jpg"
+                     alt="Credit Card"
+                     class="credit-card-image" />
+                <form id="paymentForm" asp-action="Pay" asp-controller="User">
+                    <div class="form-group">
+                        <label for="cardNumber">Card Number</label>
+                        <input asp-for="CardNumber"
+                               placeholder="Enter card number"
+                               required />
+                    </div>
+                    <div class="form-group">
+                        <label for="expiryDate">Expiry Date</label>
+                        <input asp-for="ExpireDate" placeholder="MM/YY" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="cvv">CVV</label>
+                        <input asp-for="CVV" placeholder="CVV" required />
+                    </div>
+                    <button type="submit">Pay Now </button>
+                </form>
+            </div>
+            <div id="message"></div>
+        </div>
+    </div>
+    <script src="~/js/payment.js"></script>
+</body>
+</html>
+
+

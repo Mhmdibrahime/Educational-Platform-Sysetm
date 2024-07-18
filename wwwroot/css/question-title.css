@@ -1,0 +1,137 @@
+:root {
+  --mov-color: rgb(132, 56, 142);
+  --grey-color: rgb(218, 218, 218);
+  --sky-color: rgb(230, 237, 250);
+  --blue-color: rgb(108, 112, 184);
+  --darkblue-color: rgb(54, 56, 94);
+
+  --skydark: rgb(230, 237, 250);
+  --darkbluedark: rgb(54, 56, 94);
+
+  --bluebur: #20264dd2;
+
+  --gradient1: #5584ac;
+  --gradient2: #7fc7d9;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+}
+.container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: var(--sky-color);
+}
+h1 {
+  text-align: center;
+  color: var(--darkblue-color);
+}
+.form-group {
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+label {
+  display: block;
+  font-weight: bold;
+  color: var(--darkblue-color);
+  margin-bottom: 18px;
+  font-size: 19px;
+}
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  transition: border-color 0.3s ease;
+  margin-right: 15px;
+}
+input[type="text"]:focus {
+  border-color: var(--darkblue-color);
+  outline: none;
+}
+button {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  background-color: var(--darkblue-color);
+  color: var(--sky-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+button::before {
+  content: " ";
+  background-image: linear-gradient(
+    to right,
+    var(--darkblue-color),
+    var(--gradient1),
+    var(--gradient2),
+    var(--sky-color)
+  );
+  width: 0;
+  height: 100%;
+  border-radius: 10px;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  transition: 0.3s;
+}
+
+button:hover::before {
+  width: 100%;
+}
+
+button:hover {
+  background-color: transparent;
+}
+
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  display: grid;
+  margin: 300px 50%;
+}
+.loader::before,
+.loader::after {
+  content: "";
+  grid-area: 1/1;
+  --c: no-repeat radial-gradient(farthest-side, var(--sky-color) 92%, #0000);
+  background: var(--c) 50% 0, var(--c) 50% 100%, var(--c) 100% 50%,
+    var(--c) 0 50%;
+  background-size: 12px 12px;
+  animation: l12 1s infinite;
+}
+.loader::before {
+  margin: 4px;
+  filter: hue-rotate(45deg);
+  background-size: 8px 8px;
+  animation-timing-function: linear;
+}
+
+@keyframes l12 {
+  100% {
+    transform: rotate(0.5turn);
+  }
+}
+
+.hidden {
+  opacity: 0;
+  transition: 1s;
+}
+
+.appear {
+  /* background-color: var(--sky-color); */
+  opacity: 1;
+}

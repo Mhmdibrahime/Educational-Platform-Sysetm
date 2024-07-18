@@ -1,0 +1,247 @@
+:root {
+  --mov-color: rgb(132, 56, 142);
+  --grey-color: rgb(218, 218, 218);
+  --sky-color: rgb(230, 237, 250);
+  --blue-color: rgb(108, 112, 184);
+  --darkblue-color: rgb(54, 56, 94);
+
+  --skydark: rgb(230, 237, 250);
+  --darkbluedark: rgb(54, 56, 94);
+
+  --bluebur: #20264dd2;
+
+  --hover: rgba(54, 56, 94, 0.404);
+  --hoverlight: rgba(230, 237, 250, 0.5);
+
+  --d: 2500ms;
+  --angle: 90deg;
+  --gradX: 100%;
+  --gradY: 50%;
+
+  --gradient1: #5584ac;
+  --gradient2: #7fc7d9;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.flex {
+  display: flex;
+  height: fit-content;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.navbar1 {
+  padding: 15px;
+  width: 300px;
+  height: 100%;
+  background-color: var(--darkblue-color);
+}
+
+.navbar1 .logo {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.navbar1 .logo img {
+  width: 60px;
+  margin-right: 15px;
+  margin-top: -15px;
+}
+
+.navbar1 .title p {
+  font-size: 25px;
+  font-weight: bold;
+  color: var(--sky-color);
+}
+
+.students,
+.quiz {
+  cursor: pointer;
+  margin-top: -20px;
+  transition: 0.3s;
+}
+
+.students:hover,
+.quiz:hover {
+  box-shadow: var(--hoverlight) 0px 10px 30px -12px;
+  border-radius: 10px;
+  padding: 0 10px 0 10px;
+}
+
+.title-links .data {
+  display: flex;
+}
+
+.students:hover .data p,
+.quiz:hover .data p {
+  background-image: linear-gradient(
+    to right,
+    var(--gradient1),
+    var(--sky-color),
+    var(--sky-color),
+    var(--gradient2)
+  );
+
+  background-size: 100%;
+  background-repeat: repeat;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.quiz {
+  margin-top: -40px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--sky-color);
+}
+
+a:hover {
+  color: var(--sky-color);
+}
+
+.title-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 19px;
+  font-weight: bold;
+  color: var(--sky-color);
+  margin-left: 25%;
+}
+
+.title-links .data {
+  margin-bottom: -10px;
+}
+
+.title-links .data p {
+  margin-top: 15px;
+  margin-left: 15px;
+  background-image: linear-gradient(
+    to right,
+    var(--sky-color),
+    var(--gradient2),
+    var(--gradient1),
+    var(--sky-color)
+  );
+
+  background-size: 100%;
+  background-repeat: repeat;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.title-links .plus {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.title-links img {
+  width: 25px;
+}
+
+.row .content {
+  text-align: center;
+  margin-left: 0;
+  margin-top: -5px;
+  color: var(--sky-color);
+}
+
+.row .content .btn {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding: 3px 10px 3px 10px;
+  font-size: 13px;
+  font-weight: bold;
+  color: var(--darkblue-color);
+}
+
+.active .data p {
+  background-image: linear-gradient(
+    to right,
+    var(--darkblue-color),
+    var(--gradient2),
+    var(--gradient1),
+    var(--sky-color)
+  );
+
+  background-size: 100%;
+  background-repeat: repeat;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.btn {
+  position: relative;
+  transition: 0.3s;
+  z-index: 3;
+  background-color: var(--sky-color);
+}
+
+.btn::before {
+  content: " ";
+  width: 0;
+  height: 100%;
+  border-radius: 5px;
+  background-image: linear-gradient(
+    to right,
+    var(--darkblue-color),
+    var(--gradient1),
+    var(--gradient2),
+    var(--sky-color)
+  );
+  transition: 0.3s;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.btn:hover::before {
+  width: 100%;
+}
+
+.btn:hover {
+  background-color: transparent;
+}
+
+.bars {
+  display: none;
+  width: 30px;
+}
+
+@media (max-width: 992px) {
+  .bars {
+    display: block;
+    margin-left: 15px;
+    margin-top: -15px;
+  }
+  .navbar1 {
+    position: absolute;
+    right: -100%;
+    transition: 0.3s;
+    z-index: 5;
+    top: 70px;
+  }
+}
+
+.appear {
+  right: 0px;
+}

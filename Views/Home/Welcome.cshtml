@@ -1,0 +1,329 @@
+﻿@model EducationalPlatform1._0.Models.ViewModels.FeedBackViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>General Welcome</title>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet"
+          href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/general welcome.css" />
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+</head>
+<body>
+    <div class="loader"></div>
+    <header id="header">
+        <div class="welcome container">
+            <div class="logo">
+                <img src="~/images/book.svg" id="book" />
+                <p>Storm's End</p>
+            </div>
+            <nav>
+                <ul>
+
+                    @if (User.Identity.IsAuthenticated == false)
+                    {
+                        <li id="btn-login"><a asp-action="Login" asp-controller="Account">Login</a></li>
+                        <li id="btn-register"><a asp-controller="Account" asp-action="Register">Register</a></li>
+                    }else
+                    {
+                            <li><a asp-action="Months" asp-controller="Home">Months</a></li>
+
+                    }
+
+
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#teacher">Teachers</a></li>
+                    <li><a href="#testimoalials">Testimoalials</a></li>
+                    <li><a href="#footer"> Contact Us</a></li>
+                    <li>
+                        <img src="~/images/moon.svg" id="moon" /> <img src="~/images/search.svg" id="search" />
+                        <img id="navbar" src="~/images/bars.svg" />
+                    </li>
+                    
+                        
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <div class="sidebar" id="sidebar">
+            <ul>
+                @if (User.Identity.IsAuthenticated == false)
+                {
+                    <li id="login_ul"><a asp-action="Login" asp-controller="Account"> <img src="~/images/user.svg"> Login</a></li>
+                    <li id="register_ul"><a asp-action="Register" asp-controller="Account"> <img src="~/images/registered.svg"> Register</a></li>
+                }
+
+                <!--<li><a href="choose.html"> <img src="~/images/user.svg"> Admin</a></li>-->
+                <li><a href="#"> <img src="~/images/house.svg"> Home</a></li>
+                <li><a href="#teacher"> <img src="~/images/about-us.svg"> Teachers</a></li>
+                <li><a href="#testimoalials"> <img src="~/images/about-us.svg"> Testimoalials</a></li>
+                <li><a href="#footer"> <img src="~/images/phone.svg"> Contact Us</a></li>
+               
+        </div>
+    </div>
+
+    <div id="home">
+        <div class="color" id="color">
+            <div class="background" id="background">
+                <div class="home container" id="home">
+                    <div class="content">
+                        <p>Welcome to <span> Storm's End </span>Platform</p>
+                        <p>
+                            We provide you with educational content online, so you can save
+
+                            effort and time and time benefit every minute in your,
+
+                            self-development.
+                        </p>
+                        <div class="btn btn-home">
+                            <a asp-action="About" asp-controller="Home"> About Us </a>
+                        </div>
+                    </div>
+                    <div class="image">
+                        <img src="~/images/pen.png" alt="Image" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="all-teachers text-center">
+            <div class="box">
+                <h1>Teachers</h1>
+            </div>
+            <div class="teachers container" id="teacher">
+                <div class="teacher-1">
+                    <section>
+                        <img src="~/images/teacher4.jpg" alt="Teacher 1" />
+                    </section>
+                    <div class="content-teacher">
+                        <h5> Mir/ Ali Ahmed</h5>
+                        <p>Teacher Physics in high school </p>
+                    </div>
+                    <div class="data-teacher">
+                        <h5> Mir/ Ali Ahmed </h5>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit esse nam impedit corporis est
+                            vitae debitis eos porro dolore quibusdam repudiandae fugiat rerum
+                            inventore, illum quasi quae excepturi alias facilis.
+                        </p>
+                        <div class="footer">
+                            <div class="rate">
+                                <img src="~/images/star.svg" class="star">
+                                <img src="~/images/star.svg" class="star">
+                                <img src="~/images/star.svg" class="star">
+                                <img src="~/images/star.svg" class="star">
+                                <img src="~/images/star-regular.svg" class="star-regular">
+                            </div>
+                            <a asp-action="Teacher1" asp-controller="Teacher"> <div class="btn learn">Learn More</div> </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="teacher-1">
+                    <section>
+                        <img src="~/images/teacher1.jpg" alt="Teacher 1" />
+                    </section>
+                    <div class="content-teacher">
+                        <h5> Mir/ Ayman Mohamed </h5>
+                        <p>Teacher English in high school </p>
+                    </div>
+
+                    <div class="data-teacher">
+                        <h5> Mir/ Ayman Mohamed </h5>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit esse nam impedit corporis est
+                            vitae debitis eos porro dolore quibusdam repudiandae fugiat rerum
+                            inventore, illum quasi quae excepturi alias facilis.
+                        </p>
+                        <div class="footer">
+                            <div class="rate">
+                                <img src="~/images/star.svg" class="star">
+                                <img src="~/images/star.svg" class="star">
+                                <img src="~/images/star.svg" class="star">
+                                <img src="~/images/star-half.svg" id="star-half">
+                                <img src="~/images/star-regular.svg" class="star-regular">
+                            </div>
+                            <a asp-action="Teacher2" asp-controller="Teacher"> <div class="btn learn">Learn More</div> </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="teacher-1">
+                    <section>
+                        <img src="~/images/teacher3.jpg" alt="Teacher 1" />
+                    </section>
+                    <div class="content-teacher">
+                        <h5> Mir/ Osama Sobhy </h5>
+                        <p>Teacher Maths in high school </p>
+                    </div>
+                    <div class="data-teacher">
+                        <h5> Mir/ Osama Sobhy </h5>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit esse nam impedit corporis est
+                            vitae debitis eos porro dolore quibusdam repudiandae fugiat rerum
+                            inventore, illum quasi quae excepturi alias facilis.
+                        </p>
+                        <div class="footer">
+                            <div class="rate">
+                                <img src="~/images/star.svg" class="star">
+                                <img src="~/images/star.svg" class="star">
+                                <img src="~/images/star.svg" class="star">
+                                <img src="~/images/star-regular.svg" class="star-regular">
+                                <img src="~/images/star-regular.svg" class="star-regular">
+                            </div>
+                            <a asp-action="Teacher3" asp-controller="Teacher"> <div class="btn learn"> Learn More</div> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="goal">
+            <div class="video" id="video">
+                <video src="~/images/What is Education_.mp4" muted autoplay loop></video>
+            </div>
+            <div class="video-color" id="video-color"></div>
+            <p>If the platform's goal is the same thing you aspire to, <a href="register.html"><span> join us </span> <img src="~/images/arrow.svg" id="arrow"> </a>  </p>
+        </div>
+    </div>
+    <div class="container Testimoalials" id="testimoalials">
+        <h1>Testimoalials</h1>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                
+                @foreach(var feedback in Model.Feedbacks)
+                {
+                    <div class="swiper-slide">
+                        <div class="box">
+                            <img src="@feedback.Image" class="person">
+                            <p>@feedback.FName @feedback.LName</p>
+                            <p>@feedback.Level</p>
+                            <p>
+                                @feedback.FeedBack
+                            </p>
+                            <p>
+                                @if (feedback.Rating == "Excellent")
+                                {
+                                    <img src="~/images/star.svg" class="star">
+                                    <img src="~/images/star.svg" class="star">
+                                    <img src="~/images/star.svg" class="star">
+                                    <img src="~/images/star.svg" class="star">
+                                    <img src="~/images/star.svg" class="star">
+                                }
+                                else if (feedback.Rating == "Good")
+                                {
+                                    <img src="~/images/star.svg" class="star">
+                                    <img src="~/images/star.svg" class="star">
+                                    <img src="~/images/star.svg" class="star">
+                                    <img src="~/images/star.svg" class="star">
+                                    <img src="~/images/star-regular.svg" class="star-regular">
+
+                                }
+                                else if (feedback.Rating == "Average")
+                                {
+                                    <img src="~/images/star.svg" class="star">
+                                    <img src="~/images/star.svg" class="star">
+                                    <img src="~/images/star.svg" class="star">
+                                    <img src="~/images/star-regular.svg" class="star-regular">
+                                    <img src="~/images/star-regular.svg" class="star-regular">
+                                }
+                                else if (feedback.Rating == "Below Average")
+                                {
+                                    <img src="~/images/star.svg" class="star">
+                                    <img src="~/images/star.svg" class="star">
+                                    <img src="~/images/star-regular.svg" class="star-regular">
+                                    <img src="~/images/star-regular.svg" class="star-regular">
+                                    <img src="~/images/star-regular.svg" class="star-regular">
+                                }
+                                else
+                                {
+                                    <img src="~/images/star.svg" class="star">
+                                    <img src="~/images/star-regular.svg" class="star-regular">
+                                    <img src="~/images/star-regular.svg" class="star-regular">
+                                    <img src="~/images/star-regular.svg" class="star-regular">
+                                    <img src="~/images/star-regular.svg" class="star-regular">
+                                }
+
+
+                            </p>
+                        </div>
+                    </div>
+                }
+
+            </div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact us</h3>
+
+                <ul>
+                    <li>  <img src="~/images/right.svg" class="footer-arrow"> Kafr el-sheikh</li>
+                    <li>  <img src="~/images/right.svg" class="footer-arrow">  Egypt</li>
+                    <li>  <img src="~/images/right.svg" class="footer-arrow">  +201013706142</li>
+                    <li>  <img src="~/images/right.svg" class="footer-arrow"> abdelkadermoamed@gmail.com</li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Follow us</h3>
+                <div class="social-icons">
+                    <a href="#" target="arrow">
+                        <img src="~/images/facebook.png" alt="Facebook" />
+                    </a>
+
+                    <a href="#" target="_blank">
+                        <img src="~/images/instagram.png" alt="Instagram" />
+                    </a>
+
+                    <a href="#" target="_blank">
+                        <img src="~/images/youtube.png" alt="youtube" />
+                    </a>
+
+                    <a href="#" target="_blank">
+                        <img src="~/images/twitter.png" alt="twitter" />
+                    </a>
+
+                    <a href="#" target="_blank">
+                        <img src="~/images/whatsapp.png" alt="WhatsApp" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <script src="~/js/popper.min.js"></script>
+    <script src="~/js/jquery-3.7.1.min.js"></script>
+    <script src="~/js/bootstrap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="~/js/general welcome.js"></script>
+</body>
+</html>
+

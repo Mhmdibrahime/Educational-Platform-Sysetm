@@ -1,0 +1,52 @@
+[
+  {
+    "title": "Lesson One",
+    "persentage": 80,
+    "degree": 15
+  },
+  {
+    "title": "Lesson Two",
+    "persentage": 100,
+    "degree": 20
+  },
+  {
+    "title": "Lesson Three",
+    "persentage": 60,
+    "degree": 12
+  },
+  {
+    "title": "Lesson Four",
+    "persentage": 60,
+    "degree": 12
+  },
+  {
+    "title": "Lesson Five",
+    "persentage": 20,
+    "degree": 3
+  },
+  {
+    "title": "Lesson Six",
+    "persentage": 100,
+    "degree": 20
+  },
+  {
+    "title": "Lesson Seven",
+    "persentage": 45,
+    "degree": 12
+  },
+  {
+    "title": "Lesson Eight",
+    "persentage": 30,
+    "degree": 11
+  },
+  {
+    "title": "Lesson nine",
+    "persentage": 25,
+    "degree": 13
+  },
+  {
+    "title": "Lesson Ten",
+    "persentage": 90,
+    "degree": 18
+  }
+]

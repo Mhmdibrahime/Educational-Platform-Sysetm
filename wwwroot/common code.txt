@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>teacher 1</title>
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/teacher 1.css" />
+  </head>
+  <body>
+    <header id="header">
+      <div class="welcome container">
+        <div class="logo">
+          <img src="images/book.svg" id="book" />
+          <p>Storm's End</p>
+        </div>
+        <nav>
+          <ul>
+            <li id="btn-login"><a href="#">Login</a></li>
+            <li id="btn-register"><a href="#">Register</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#"> Contact Us</a></li>
+            <li>
+              <img src="images/moon.svg" id="moon" />
+              <img src="images/search.svg" id="search" />
+              <img id="navbar" src="images/bars.svg" />
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="sidebar" id="sidebar">
+        <ul>
+          <li id="login_ul"><a href="#"> <img src="images/user.svg"> Login</a></li>
+          <li id="register_ul"><a href="#"> <img src="images/registered.svg"> Register</a></li>
+          <li><a href="#"> <img src="images/house.svg"> Home</a></li>
+          <li><a href="#"> <img src="images/about-us.svg"> About Us</a></li>
+          <li><a href="#"> <img src="images/phone.svg"> Contact Us</a></li>
+  
+        </div>
+      </div>
+
+
+      <footer id="footer">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Contact us</h3>
+  
+            <ul>
+              <li>  <img src="images/right.svg" class="footer-arrow"> Kafr el-sheikh</li>
+              <li>  <img src="images/right.svg" class="footer-arrow">  Egypt</li>
+              <li>  <img src="images/right.svg" class="footer-arrow">  +201013706142</li>
+              <li>  <img src="images/right.svg" class="footer-arrow"> abdelkadermoamed@gmail.com</li>
+            </ul>
+          </div>
+  
+          <div class="footer-section">
+            <h3>Follow us</h3>
+            <div class="social-icons">
+              <a href="#" target="arrow">
+                <img src="images/facebook.png" alt="Facebook" />
+              </a>
+  
+              <a href="#" target="_blank">
+                <img src="images/instagram.png"  alt="Instagram" />
+              </a>
+  
+              <a href="#" target="_blank">
+                <img src="images/youtube.png" alt="youtube" />
+              </a>
+  
+              <a href="#" target="_blank">
+                <img src="images/twitter.png" alt="twitter" />
+              </a>
+  
+              <a href="#" target="_blank">
+                <img src="images/whatsapp.png" alt="WhatsApp" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div class="login section" id="login">
+        <img id="close" src="images/close.svg">
+        <div class="container">
+          <div class="row full-height justify-content-center">
+            <div class="col-12 text-center align-self-center py-5">
+              <div class="section pb-5 pt-5 pt-sm-2 text-center">
+                <h6 class="mb-0 pb-3">
+                  <span>Log In </span><span>Sign Up</span>
+                </h6>
+                <input
+                  class="checkbox"
+                  type="checkbox"
+                  id="reg-log"
+                  name="reg-log"
+                />
+                <label for="reg-log"></label>
+                <div class="card-3d-wrap mx-auto">
+                  <div class="card-3d-wrapper">
+                    <div class="card-front">
+                      <div class="center-wrap">
+                        <div class="section text-center">
+                          <h4 class="mb-4 pb-3">Log In</h4>
+                          <div class="form-group">
+                            <input
+                              type="email"
+                              class="form-style"
+                              placeholder="Email"
+                            />
+                            <i class="input-icon uil uil-at"></i>
+                          </div>
+                          <div class="form-group mt-2">
+                            <input
+                              type="password"
+                              class="form-style"
+                              placeholder="Password"
+                            />
+                            <i class="input-icon uil uil-lock-alt"></i>
+                          </div>
+                          <a
+                            href="###########################################"
+                            class="btn mt-4"
+                            >Login</a
+                          >
+                          <p class="mb-0 mt-4 text-center">
+                            <a
+                              href="###################################"
+                              class="link"
+                              >Forgot your password?</a
+                            >
+                          </p>
+                        </div>
+                        <div class="section photo">
+                          <img src="images/login4.png" />
+  
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-back">
+                      <div class="center-wrap">
+                        <div class="section text-center">
+                          <h4 class="mb-3 pb-3">Sign Up</h4>
+                          <div class="form-group">
+                            <input
+                              type="text"
+                              class="form-style"
+                              placeholder="First Name"
+                            />
+                            <i class="input-icon uil uil-user"></i>
+                          </div>
+                          <div class="form-group mt-2">
+                            <input
+                              type="text"
+                              class="form-style"
+                              placeholder="Last Name"
+                            />
+                            <i class="input-icon uil uil-user"></i>
+                          </div>
+                          <div class="form-group mt-2">
+                            <input
+                              type="tel"
+                              class="form-style"
+                              placeholder="Phone Number"
+                            />
+                            <i class="input-icon uil uil-phone"></i>
+                          </div>
+                          <div class="form-group mt-2">
+                            <input
+                              type="email"
+                              class="form-style"
+                              placeholder="Email"
+                            />
+                            <i class="input-icon uil uil-at"></i>
+                          </div>
+                          <div class="form-group mt-2">
+                            <input
+                              type="password"
+                              class="form-style"
+                              placeholder="Password"
+                            />
+                            <i class="input-icon uil uil-lock-alt"></i>
+                          </div>
+                          <a
+                            href="##########################################"
+                            class="btn mt-4"
+                            >Register</a
+                          >
+                        </div>
+                        <div class="section photo">
+                          <img src="images/login4.png" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <script src="js/popper.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/teacher 1.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--sky-color);
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.link {
+  color: #ffffff;
+}
+
+.link:hover {
+  color: #c4c3ca;
+}
+
+.section {
+  position: relative;
+  width: 100%;
+  display: block;
+  padding: 0px !important;
+}
+
+.full-height {
+  min-height: 100vh;
+}
+
+:root {
+  --mov-color: rgb(132, 56, 142);
+  --grey-color: rgb(218, 218, 218);
+  --sky-color: rgb(230, 237, 250);
+  --blue-color: rgb(108, 112, 184);
+  --darkblue-color: rgb(54, 56, 94);
+
+  --skydark: rgb(230, 237, 250);
+  --darkbluedark: rgb(54, 56, 94);
+
+  --bluebur: #20264dd2;
+}
+
+.dark {
+  --sky-color: rgb(54, 56, 94);
+  --darkblue-color: rgb(230, 237, 250);
+  --bluebur: rgba(230, 237, 250, 0.811);
+}
+
+.shadow {
+  box-shadow: 0 0 10px 0 var(--darkblue-color);
+}
+
+.welcome,
+footer {
+  padding: 20px;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: #ffffff; */
+  color: var(--darkblue-color);
+  text-align: center;
+}
+
+header {
+  background-color: var(--sky-color);
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  transition: 0.3s;
+  z-index: 100;
+}
+
+header .logo {
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--darkblue-color);
+}
+
+header .logo p {
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+header .logo img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+header #navbar {
+  display: none;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--darkblue-color);
+  padding: 5px 10px;
+  border: 1px solid var(--darkblue-color);
+  border-radius: 5px;
+}
+
+header nav ul li:not(:last-child):after {
+  content: " ";
+  background-color: var(--darkblue-color);
+  width: 0;
+  height: 120%;
+  border-radius: 5px;
+  position: absolute;
+  left: 0;
+  top: -3px;
+  transition: 0.5s;
+  z-index: -1;
+}
+
+header nav ul li:not(:last-child):hover:after {
+  width: 100%;
+}
+header nav ul li a:hover {
+  color: var(--sky-color);
+}
+
+header li img {
+  width: 25px;
+  margin-right: 10px;
+}
+
+.sidebar {
+  position: fixed;
+  right: -100%;
+  top: 65px;
+  padding: 30px 20px 20px 0;
+  background-color: var(--darkblue-color);
+  width: fit-content;
+  transition: 0.7s;
+}
+
+.side {
+  right: 0;
+  transition: 0.7s;
+}
+
+.sidebar li {
+  position: relative;
+  padding: 10px;
+}
+
+.sidebar li::after {
+  content: " ";
+  height: 3px;
+  width: 0;
+  background-color: var(--sky-color);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: 0.3s;
+}
+
+.sidebar li:hover::after {
+  width: 100%;
+}
+
+.sidebar a {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--sky-color);
+  padding: 10px;
+}
+
+.sidebar a img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.footer-section .social-icons img,
+.footer-section .social-icon {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+}
+
+footer {
+  background-color: var(--darkblue-color);
+  color: var(--sky-color);
+  padding: 20px;
+  /* text-align: center; */
+  margin-top: auto;
+}
+
+.footer-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-section {
+  padding: 0 50px;
+  text-align: left;
+  color: var(--sky-color);
+}
+
+.footer-section h2 {
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  width: fit-content;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.footer-section li {
+  margin-bottom: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.footer-section li:hover {
+  transform: translateX(10px);
+}
+
+[type="checkbox"]:checked,
+[type="checkbox"]:not(:checked) {
+  display: none;
+}
+
+.checkbox:checked + label,
+.checkbox:not(:checked) + label {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  width: 60px;
+  height: 16px;
+  border-radius: 8px;
+  padding: 0;
+  margin: 10px auto;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+
+.checkbox:checked + label:before,
+.checkbox:not(:checked) + label:before {
+  position: absolute;
+  display: block;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: #ffffff;
+  background-color: var(--darkbluedark);
+  font-family: "unicons";
+  content: "\eb4f";
+  z-index: 20;
+  top: -10px;
+  left: -10px;
+  line-height: 36px;
+  text-align: center;
+  font-size: 24px;
+  transition: all 0.5s ease;
+}
+
+.checkbox:checked + label:before {
+  transform: translateX(44px) rotate(-270deg);
+}
+
+.card-3d-wrap {
+  position: relative;
+  width: 900px;
+  max-width: 100%;
+  height: 500px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  perspective: 800px;
+  margin-top: 20px;
+}
+
+.card-3d-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  transition: all 600ms ease-out;
+}
+
+.card-front,
+.card-back {
+  width: 100%;
+  height: 100%;
+  background-color: var(--darkbluedark);
+  background-image: url("######################################################");
+  position: absolute;
+  border-radius: 6px;
+  -webkit-transform-style: preserve-3d;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.checkbox:checked ~ .card-3d-wrap .card-3d-wrapper {
+  transform: rotateY(180deg);
+}
+
+.center-wrap {
+  position: absolute;
+  width: 100%;
+  padding: 0 35px;
+  top: 50%;
+  left: 0;
+  transform: translate3d(0, -50%, 35px) perspective(100px);
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.center-wrap .section img {
+  width: 350px;
+}
+
+.form-group {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.form-style {
+  padding: 13px 20px;
+  padding-left: 55px;
+  height: 40px;
+  width: 80%;
+  font-weight: 500;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.5px;
+  outline: none;
+  background-color: var(--skydark);
+  border: none;
+  transition: all 200ms linear;
+  box-shadow: 0 4px 8px 0 rgba(21, 21, 21, 0.2);
+}
+
+.form-style:focus,
+.form-style:active {
+  border: none;
+  outline: none;
+  box-shadow: 0 4px 8px 0 rgba(21, 21, 21, 0.2);
+}
+
+.input-icon {
+  color: var(--darkbluedark);
+  position: absolute;
+  top: 0;
+  left: 45px;
+  height: 48px;
+  font-size: 24px;
+  line-height: 48px;
+  text-align: left;
+  transition: all 200ms linear;
+}
+
+.btn {
+  border-radius: 4px;
+  height: 44px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 200ms linear;
+  padding: 0 30px;
+  letter-spacing: 1px;
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--skydark);
+  color: var(--darkbluedark);
+  position: relative;
+  z-index: -1;
+  cursor: pointer;
+}
+
+.login {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  z-index: 200;
+  transition: 0.8s;
+}
+
+.login::after {
+  content: " ";
+  background-color: rgb(230, 237, 250);
+  opacity: 0.9;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+.top_login {
+  top: 0px;
+}
+
+.login #close {
+  width: 20px;
+  position: absolute;
+  right: 100px;
+  top: 70px;
+  cursor: pointer;
+}
+
+@keyframes arrow-move {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(20px);
+  }
+}
+
+@media (max-width: 992px) {
+  .center-wrap .section img {
+    width: 230px;
+  }
+  header #navbar {
+    display: inline-block;
+  }
+  header nav li:not(:last-child) {
+    display: none;
+  }
+  .footer-section {
+    padding: 20px;
+  }
+  .login .photo {
+    display: none;
+  }
+}
+
+@media (max-width: 552px) {
+  .center-wrap .section img {
+    width: 150px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+let header = document.getElementById("header");
+window.addEventListener("scroll", function () {
+  if (window.scrollY > 0) {
+    header.classList.add("shadow");
+  } else {
+    header.classList.remove("shadow");
+  }
+});
+
+let bars = document.getElementById("navbar");
+let sidebar = document.getElementById("sidebar");
+bars.addEventListener("click", function () {
+  sidebar.classList.toggle("side");
+});
+
+let login = document.getElementById("login");
+let btn_log = document.getElementById("btn-login");
+let btn_reg = document.getElementById("btn-register");
+let close = document.getElementById("close");
+
+btn_log.addEventListener("click", function () {
+  login.classList.add("top_login");
+});
+
+btn_reg.addEventListener("click", function () {
+  login.classList.add("top_login");
+});
+
+close.addEventListener("click", function () {
+  login.classList.remove("top_login");
+});
+
+let register_ul = document.getElementById("register_ul");
+let login_ul = document.getElementById("login_ul");
+
+register_ul.addEventListener("click", function () {
+  sidebar.classList.remove("side");
+  login.classList.add("top_login");
+});
+
+login_ul.addEventListener("click", function () {
+  sidebar.classList.remove("side");
+  login.classList.add("top_login");
+});
+
+let moon = document.getElementById("moon");
+let home = document.getElementById("home");
+let book = document.getElementById("book");
+let footer_arrow = document.getElementsByClassName("footer-arrow");
+
+moon.addEventListener("click", function () {
+  document.body.classList.toggle("dark");
+  if (moon.src.includes("moon.svg")) {
+    moon.src = "images/sun-light.svg";
+    search.src = "images/search-light.svg";
+    navbar.src = "images/bars-light.svg";
+    book.src = "images/book-light.svg";
+    arrow.src = "images/right.svg";
+
+    for (let i = 0; i < footer_arrow.length; i++) {
+      footer_arrow[i].src = "images/right-dark.svg";
+    }
+  } else {
+    moon.src = "images/moon.svg";
+    search.src = "images/search.svg";
+    navbar.src = "images/bars.svg";
+    book.src = "images/book.svg";
+
+    for (let i = 0; i < footer_arrow.length; i++) {
+      footer_arrow[i].src = "images/right.svg";
+    }
+  }
+});

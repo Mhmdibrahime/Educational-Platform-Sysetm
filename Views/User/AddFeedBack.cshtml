@@ -1,0 +1,58 @@
+﻿@model EducationalPlatform1._0.Models.ViewModels.FeedBackViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Feedback</title>
+    <link rel="stylesheet" href="~/css/feedback-student.css" />
+</head>
+<body>
+    <div class="loader"></div>
+    <div class="container hidden">
+        <div class="content">
+            <h1>Student Feedback Form</h1>
+            <form id="feedbackForm" asp-action="AddFeedBack" asp-controller="User" method="post">
+               
+                <div class="form-group">
+                    <label for="experience">Overall Experience:</label>
+                    <select asp-for="Rating">
+                        <option value="Excellent">Excellent</option>
+                        <option value="Good">Good</option>
+                        <option value="Average">Average</option>
+                        <option value="Below Average">Below Average</option>
+                        <option value="Poor">Poor</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea asp-for="Feedback"
+                              rows="4"
+                              maxlength="400"></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="image">
+            <img src="~/images//content3.jpg" />
+        </div>
+    </div>
+
+    <script>
+        let loader = document.querySelector(".loader");
+        let hidden = document.querySelector(".hidden");
+
+        setTimeout(function () {
+            loader.style.display = "none";
+            document.body.classList.add("appear");
+            hidden.classList.add("appear");
+        }, 2000);
+    </script>
+</body>
+</html>

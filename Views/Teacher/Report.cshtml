@@ -1,0 +1,71 @@
+﻿@model EducationalPlatform1._0.Models.ViewModels.ProfileViewModel;
+@{
+    Layout = null;
+    
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/css/profile.css" />
+    <title>Student Profile</title>
+</head>
+<body>
+    <div class="loader"></div>
+    <div class="hidden">
+        <div class="container">
+            <div class="content">
+
+                <div class="profile">
+                    <div class="photo">
+                        <img src="@Model.ImagePath"
+                             alt="Student Image"
+                             class="profile-image" />
+                    </div>
+                    <div class="data">
+                        <p><strong>Name:</strong> @Model.Name </p>
+                        <p><strong>Email:</strong> @Model.Email</p>
+                        <p><strong>Phone:</strong> @Model.PhoneNumber </p>
+                        <!--<p><strong>Password:</strong> @User.Identity. </p>-->
+                        <p><strong>ID:</strong> @Model.Id </p>
+                        <div class="icon">
+
+                            <img src="~/images/search.svg" />
+                            <input type="text" placeholder="Search" />
+                            <!--<button asp-action="Logout" asp-controller="Account" class="log-out">Logout</button>-->
+                            <img src="~/images/moon.svg" class="moon" />
+                        </div>
+                    </div>
+                </div>
+                <div class="icon">
+                    <img src="~/images/search.svg" />
+                    <input type="text" placeholder="Search" />
+                    <img src="~/images/moon.svg" class="moon" />
+                    
+                </div>
+            </div>
+                <table>
+                    <tr>
+                        <th>Title</th>
+                        <th>Percentage</th>
+                        <th>Out of 20</th>
+                        <th>Wrongs</th>
+                    </tr>
+                @foreach (var result in Model.Grades)
+                {
+                    <tr>
+                        <td class="col">@result.QuizTitle</td>
+                        <td>@result.Percentage %</td>
+                        <td>@result.CorrectAnswers</td>
+                        <td>@result.WrongAnswers</td>
+                    </tr>
+                }
+                </table>
+            
+        </div>
+    </div>
+    <script src="~/js/profile.js"></script>
+</body>
+</html>

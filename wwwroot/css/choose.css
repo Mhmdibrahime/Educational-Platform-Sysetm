@@ -1,0 +1,122 @@
+:root {
+  --mov-color: rgb(132, 56, 142);
+  --grey-color: rgb(218, 218, 218);
+  --sky-color: rgb(230, 237, 250);
+  --blue-color: rgb(108, 112, 184);
+  --darkblue-color: rgb(54, 56, 94);
+
+  --skydark: rgb(230, 237, 250);
+  --darkbluedark: rgb(54, 56, 94);
+
+  --bluebur: #20264dd2;
+
+  --gradient1: #5584ac;
+  --gradient2: #7fc7d9;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+  background-color: var(--sky-color);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: var(--darkblue-color);
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 18px;
+  background-color: var(--darkblue-color);
+  color: var(--sky-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 10px;
+  transition: background-color 0.3s ease;
+  position: relative;
+  transition: 0.3s;
+  z-index: 3;
+  cursor: pointer;
+}
+
+.btn::before {
+  content: " ";
+  width: 0;
+  height: 100%;
+  border-radius: 5px;
+  background-image: linear-gradient(
+    to right,
+    var(--darkblue-color),
+    var(--gradient1),
+    var(--gradient2),
+    var(--sky-color)
+  );
+  transition: 0.3s;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.btn:hover::before {
+  width: 100%;
+  background-color: transparent;
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  aspect-ratio: 1;
+  display: grid;
+}
+
+.loader::before,
+.loader::after {
+  content: "";
+  grid-area: 1/1;
+  --c: no-repeat radial-gradient(farthest-side, var(--sky-color) 92%, #0000);
+  background: var(--c) 50% 0, var(--c) 50% 100%, var(--c) 100% 50%,
+    var(--c) 0 50%;
+  background-size: 12px 12px;
+  animation: l12 1s infinite;
+}
+.loader::before {
+  margin: 4px;
+  filter: hue-rotate(45deg);
+  background-size: 8px 8px;
+  animation-timing-function: linear;
+}
+
+@keyframes l12 {
+  100% {
+    transform: rotate(0.5turn);
+  }
+}
+
+.hidden {
+  opacity: 0;
+  transition: 1s;
+}
+
+.appear {
+  opacity: 1;
+}

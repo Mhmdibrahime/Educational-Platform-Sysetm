@@ -1,0 +1,139 @@
+﻿@model EducationalPlatform1._0.Models.ViewModels.QuizViewModel;
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+          crossorigin="anonymous" />
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+    <link rel="shortcut icon"
+          href="http://clipart-library.com/images/pcqrGooLi.png"
+          type="image/x-icon" />
+
+    <link rel="stylesheet" href="~/css/quiz.css" />
+    <title>MCQ test page</title>
+</head>
+<body>
+<div class="loader"></div>
+<div class="hidden">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          
+
+            <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            @* <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item p-1">
+                        <button type="button" href="#" class="btn btn-danger submit">
+                            <span class="material-icons">send</span> Submit
+                        </button>
+                    </li>
+                    <li class="nav-item p-1">
+                        <button type="button" href="#" class="btn btn-primary report">
+                            <span class="material-icons">flag</span> Report
+                        </button>
+                    </li>
+
+                    <li class="nav-item p-1">
+                        <button type="button" href="#" class="btn btn-danger exit">
+                            Exit <span class="material-icons">logout</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div> *@
+    </nav>
+
+    <div class="container-fluid">
+            <p class="h2 title">@Model.QuizTitle</p>
+        <div class="row gy-3">
+                <form asp-action="SubmitQuiz" asp-controller="User" method="post" enctype="multipart/form-data">
+                    <!-- Iterate over each question -->
+                    @for (int i = 0; i < Model.Questions.Count; i++)
+                    {
+                        <div class="col-lg-12 col-xs-12">
+                            <div class="p-3 d-grid">
+                                <h3><b> Question @(i + 1) </b></h3>
+                                <p>@Model.Questions[i].question</p>
+
+                                <div class="row gy-3">
+                                    <!-- Display options for the current question -->
+                                    <input type="hidden" name="questionIds[@i]" value="@Model.Questions[i].Id" />
+                                    <div class="col-lg-12">
+                                        <div class="p-3 bg-white d-grid">
+                                            <label>
+                                                <input type="radio" name="answers[@i]" value="@Model.Questions[i].OptionA" />&nbsp;
+                                                @Model.Questions[i].OptionA
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="p-3 bg-white d-grid">
+                                            <label>
+                                                <input type="radio" name="answers[@i]" value="@Model.Questions[i].OptionB" />&nbsp;
+                                                @Model.Questions[i].OptionB
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="p-3 bg-white d-grid">
+                                            <label>
+                                                <input type="radio" name="answers[@i]" value="@Model.Questions[i].OptionC" />&nbsp;
+                                                @Model.Questions[i].OptionC
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="p-3 bg-white d-grid">
+                                            <label>
+                                                <input type="radio" name="answers[@i]" value="@Model.Questions[i].OptionD" />&nbsp;
+                                                @Model.Questions[i].OptionD
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    <button type="submit" class="btn btn-next">Submit Quiz</button>
+                </form>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+
+<script>
+    let loader = document.querySelector(".loader");
+    let hidden = document.querySelector(".hidden");
+
+    setTimeout(function () {
+        loader.style.display = "none";
+        document.body.classList.add("appear");
+        hidden.classList.add("appear");
+    }, 2000);
+</script>
+</body>
+</html>

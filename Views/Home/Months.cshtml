@@ -1,0 +1,2835 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>month 1</title>
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="~/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/months 1.css" />
+  </head>
+  <body>
+    <div class="loader"></div>
+    <div class="hidden">
+      <header id="header">
+        <div class="welcome container">
+          <div class="logo">
+            <img src="~/images/book.svg" id="book" />
+            <p>Storm's End</p>
+          </div>
+          <nav>
+            <ul>
+                @if(User.IsInRole("Student"))
+                {
+                   <li>
+                      <a asp-action="AddFeedBack" asp-controller="User"><button>FeedBack</button> </a>
+                   </li>
+                }
+                        @if (User.IsInRole("Admin"))
+                        {
+
+                            <li>
+                                <a asp-action="AddTeacher" asp-controller="Admin"><button>Add Teacher</button> </a>
+                            </li>
+                        }
+
+              <li>
+                <img src="~/images/moon.svg" id="moon" />
+                <!-- <img src="~/images/search.svg" id="search" /> -->
+                <img id="navbar" src="~/images/bars.svg" />
+              </li>
+              <li>
+                  <a asp-action="Profile" asp-controller="User">
+                  <img src="~/images/user-solid (1).svg" id="user" />
+                </a>
+                <span style="font-weight: bold"> Welcome @User.Identity.Name </span>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <div class="container month" id="month">
+        <div class="background" id="background">
+          <ul class="nav nav-pills" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active"
+                id="pills-home-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-home"
+                type="button"
+                role="tab"
+                aria-controls="pills-home"
+                aria-selected="true"
+              >
+                Month 1
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="pills-profile-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-profile"
+                type="button"
+                role="tab"
+                aria-controls="pills-profile"
+                aria-selected="false"
+              >
+                Month 2
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="pills-contact-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-contact"
+                type="button"
+                role="tab"
+                aria-controls="pills-contact"
+                aria-selected="false"
+              >
+                Month 3
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="pills-contact-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-month4"
+                type="button"
+                role="tab"
+                aria-controls="pills-contact"
+                aria-selected="false"
+              >
+                Month 4
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="pills-contact-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-month5"
+                type="button"
+                role="tab"
+                aria-controls="pills-contact"
+                aria-selected="false"
+              >
+                Month 5
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="pills-contact-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-month6"
+                type="button"
+                role="tab"
+                aria-controls="pills-contact"
+                aria-selected="false"
+              >
+                Month 6
+              </button>
+            </li>
+          </ul>
+          <div class="tab-content" id="pills-tabContent">
+            <div
+              class="tab-pane fade show active"
+              id="pills-home"
+              role="tabpanel"
+              aria-labelledby="pills-home-tab"
+              tabindex="0"
+            >
+              <main>
+                <div class="section1">
+                  <div class="lessons">
+                    <img src="~/images/content3.jpg" />
+                    <p class="fw-bold fs-3">Lesson One</p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Necessitatibus obcaecati iure iste asperiores
+                    </p>
+
+                    <div class="button-container">
+                      <div
+                        class="modal fade"
+                        id="exampleModalToggle1"
+                        aria-hidden="true"
+                        aria-labelledby="exampleModalToggleLabel1"
+                        tabindex="-1"
+                      >
+                        <div
+                          class="modal-dialog modal-dialog-centered modal-lg"
+                        >
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1
+                                class="modal-title fs-5"
+                                id="exampleModalToggleLabel1"
+                              >
+                                Lesson one
+                              </h1>
+                              <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                              ></button>
+                            </div>
+                            <div class="modal-body">
+                              <video src="~/vidoes/1.mp4" controls></video>
+                            </div>
+                            <div class="modal-footer">
+                              <button
+                                class="btn"
+                                data-bs-target="#exampleModalToggle1"
+                                data-bs-toggle="modal"
+                              >
+                                Watched
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex">
+                        <button
+                          class="btn"
+                          data-bs-target="#exampleModalToggle1"
+                          data-bs-toggle="modal">
+                          For Watching
+                        </button>
+                        @if(User.IsInRole("Student")){
+                        <a asp-action="Quiz"
+                           asp-controller="User"
+                           asp-route-id="1"
+                          ><button class="btn" data-bs-toggle="modal">
+                            Quiz
+                          </button></a>}
+                          else if(User.IsInRole("Teacher"))
+                          {
+                              <a asp-action="AddQuiz"
+                               asp-controller="Teacher">
+                               <button class="btn" data-bs-toggle="modal">
+                                Add Quiz
+                                </button>
+                              </a>
+                          }
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="section2">
+                  <div class="lessons">
+                    <img src="~/images/content3.jpg" />
+                    <p class="fw-bold fs-3">Lesson Two</p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Necessitatibus obcaecati iure iste asperiores
+                    </p>
+
+                    <div class="button-container">
+                      <div
+                        class="modal fade"
+                        id="exampleModalToggle2"
+                        aria-hidden="true"
+                        aria-labelledby="exampleModalToggleLabel2"
+                        tabindex="-1"
+                      >
+                        <div
+                          class="modal-dialog modal-dialog-centered modal-lg"
+                        >
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1
+                                class="modal-title fs-5"
+                                id="exampleModalToggleLabel2"
+                              >
+                                Lesson one
+                              </h1>
+                              <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                              ></button>
+                            </div>
+                            <div class="modal-body">
+                              <video src="~/vidoes/2.mp4" controls></video>
+                            </div>
+                            <div class="modal-footer">
+                              <button
+                                class="btn"
+                                data-bs-target="#exampleModalToggle2"
+                                data-bs-toggle="modal"
+                              >
+                                Watched
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex">
+                        <button
+                          class="btn"
+                          data-bs-target="#exampleModalToggle2"
+                          data-bs-toggle="modal"
+                        >
+                          For Watching
+                        </button>
+                                            @if (User.IsInRole("Student"))
+                                            {
+                                                <a asp-action="Quiz"
+                                                   asp-controller="User"
+                                                   asp-route-id="2">
+                                                    <button class="btn" data-bs-toggle="modal">
+                                                        Quiz
+                                                    </button>
+                                                </a>
+                                            }
+                                            else if (User.IsInRole("Teacher"))
+                                            {
+                                                <a asp-action="AddQuiz"
+                                                   asp-controller="Teacher">
+                                                    <button class="btn" data-bs-toggle="modal">
+                                                        Add Quiz
+                                                    </button>
+                                                </a>
+                                            }
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="section3">
+                  <div class="lessons">
+                    <img src="~/images/content3.jpg" />
+                    <p class="fw-bold fs-3">Lesson Three</p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Necessitatibus obcaecati iure iste asperiores
+                    </p>
+
+                    <div class="button-container">
+                      <div
+                        class="modal fade"
+                        id="exampleModalToggle3"
+                        aria-hidden="true"
+                        aria-labelledby="exampleModalToggleLabel3"
+                        tabindex="-1"
+                      >
+                        <div
+                          class="modal-dialog modal-dialog-centered modal-lg"
+                        >
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1
+                                class="modal-title fs-5"
+                                id="exampleModalToggleLabel3"
+                              >
+                                Lesson one
+                              </h1>
+                              <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                              ></button>
+                            </div>
+                            <div class="modal-body">
+                              <video src="~/vidoes/3.mp4" controls></video>
+                            </div>
+                            <div class="modal-footer">
+                              <button
+                                class="btn"
+                                data-bs-target="#exampleModalToggle3"
+                                data-bs-toggle="modal"
+                              >
+                                Watched
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex">
+                        <button
+                          class="btn"
+                          data-bs-target="#exampleModalToggle3"
+                          data-bs-toggle="modal"
+                        >
+                          For Watching
+                        </button>
+                                            @if (User.IsInRole("Student"))
+                                            {
+                                                <a asp-action="Quiz"
+                                                   asp-controller="User"
+                                                   asp-route-id="3">
+                                                    <button class="btn" data-bs-toggle="modal">
+                                                        Quiz
+                                                    </button>
+                                                </a>
+                                            }
+                                            else if (User.IsInRole("Teacher"))
+                                            {
+                                                <a asp-action="AddQuiz"
+                                                   asp-controller="Teacher">
+                                                    <button class="btn" data-bs-toggle="modal">
+                                                        Add Quiz
+                                                    </button>
+                                                </a>
+                                            }
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="section4">
+                  <div class="lessons">
+                    <img src="~/images/content3.jpg" />
+                    <p class="fw-bold fs-3">Lesson Four</p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Necessitatibus obcaecati iure iste asperiores
+                    </p>
+
+                    <div class="button-container">
+                      <div
+                        class="modal fade"
+                        id="exampleModalToggle4"
+                        aria-hidden="true"
+                        aria-labelledby="exampleModalToggleLabel4"
+                        tabindex="-1"
+                      >
+                        <div
+                          class="modal-dialog modal-dialog-centered modal-lg"
+                        >
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1
+                                class="modal-title fs-5"
+                                id="exampleModalToggleLabel4"
+                              >
+                                Lesson one
+                              </h1>
+                              <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                              ></button>
+                            </div>
+                            <div class="modal-body">
+                              <video src="~/vidoes/4.mp4" controls></video>
+                            </div>
+                            <div class="modal-footer">
+                              <button
+                                class="btn"
+                                data-bs-target="#exampleModalToggle4"
+                                data-bs-toggle="modal"
+                              >
+                                Watched
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex">
+                        <button
+                          class="btn"
+                          data-bs-target="#exampleModalToggle4"
+                          data-bs-toggle="modal"
+                        >
+                          For Watching
+                        </button>
+                                            @if (User.IsInRole("Student"))
+                                            {
+                                                <a asp-action="Quiz"
+                                                   asp-controller="User"
+                                                   asp-route-id="4">
+                                                    <button class="btn" data-bs-toggle="modal">
+                                                        Quiz
+                                                    </button>
+                                                </a>
+                                            }
+                                            else if (User.IsInRole("Teacher"))
+                                            {
+                                                <a asp-action="AddQuiz"
+                                                   asp-controller="Teacher">
+                                                    <button class="btn" data-bs-toggle="modal">
+                                                        Add Quiz
+                                                    </button>
+                                                </a>
+                                            }
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="section5">
+                  <div class="lessons">
+                    <img src="~/images/content3.jpg" />
+                    <p class="fw-bold fs-3">Lesson Five</p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Necessitatibus obcaecati iure iste asperiores
+                    </p>
+
+                    <div class="button-container">
+                      <div
+                        class="modal fade"
+                        id="exampleModalToggle5"
+                        aria-hidden="true"
+                        aria-labelledby="exampleModalToggleLabel5"
+                        tabindex="-1"
+                      >
+                        <div
+                          class="modal-dialog modal-dialog-centered modal-lg"
+                        >
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1
+                                class="modal-title fs-5"
+                                id="exampleModalToggleLabel5"
+                              >
+                                Lesson one
+                              </h1>
+                              <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                              ></button>
+                            </div>
+                            <div class="modal-body">
+                              <video src="~/vidoes/5.mp4" controls></video>
+                            </div>
+                            <div class="modal-footer">
+                              <button
+                                class="btn"
+                                data-bs-target="#exampleModalToggle5"
+                                data-bs-toggle="modal"
+                              >
+                                Watched
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex">
+                        <button
+                          class="btn"
+                          data-bs-target="#exampleModalToggle5"
+                          data-bs-toggle="modal"
+                        >
+                          For Watching
+                        </button>
+                                            @if (User.IsInRole("Student"))
+                                            {
+                                                <a asp-action="Quiz"
+                                                   asp-controller="User"
+                                                   asp-route-id="5">
+                                                    <button class="btn" data-bs-toggle="modal">
+                                                        Quiz
+                                                    </button>
+                                                </a>
+                                            }
+                                            else if (User.IsInRole("Teacher"))
+                                            {
+                                                <a asp-action="AddQuiz"
+                                                   asp-controller="Teacher">
+                                                    <button class="btn" data-bs-toggle="modal">
+                                                        Add Quiz
+                                                    </button>
+                                                </a>
+                                            }
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="section6">
+                  <div class="lessons">
+                    <img src="~/images/content3.jpg" />
+                    <p class="fw-bold fs-3">Lesson Six</p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Necessitatibus obcaecati iure iste asperiores
+                    </p>
+
+                    <div class="button-container">
+                      <div
+                        class="modal fade"
+                        id="exampleModalToggle6"
+                        aria-hidden="true"
+                        aria-labelledby="exampleModalToggleLabel6"
+                        tabindex="-1"
+                      >
+                        <div
+                          class="modal-dialog modal-dialog-centered modal-lg"
+                        >
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1
+                                class="modal-title fs-5"
+                                id="exampleModalToggleLabel6"
+                              >
+                                Lesson one
+                              </h1>
+                              <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                              ></button>
+                            </div>
+                            <div class="modal-body">
+                              <video src="~/vidoes/6.mp4" controls></video>
+                            </div>
+                            <div class="modal-footer">
+                              <button
+                                class="btn"
+                                data-bs-target="#exampleModalToggle6"
+                                data-bs-toggle="modal"
+                              >
+                                Watched
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex">
+                        <button
+                          class="btn"
+                          data-bs-target="#exampleModalToggle6"
+                          data-bs-toggle="modal"
+                        >
+                          For Watching
+                        </button>
+                                            @if (User.IsInRole("Student"))
+                                            {
+                                                <a asp-action="Quiz"
+                                                   asp-controller="User"
+                                                   asp-route-id="6">
+                                                    <button class="btn" data-bs-toggle="modal">
+                                                        Quiz
+                                                    </button>
+                                                </a>
+                                            }
+                                            else if (User.IsInRole("Teacher"))
+                                            {
+                                                <a asp-action="AddQuiz"
+                                                   asp-controller="Teacher">
+                                                    <button class="btn" data-bs-toggle="modal">
+                                                        Add Quiz
+                                                    </button>
+                                                </a>
+                                            }
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="container"></div>
+              </main>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="pills-profile"
+              role="tabpanel"
+              aria-labelledby="pills-profile-tab"
+              tabindex="0"
+            >
+              <main>
+                <div class="section1">
+                  <div class="lessons">
+                    <img src="~/images/content4.jpg" />
+                    <p class="fw-bold fs-3">Lesson One</p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Necessitatibus obcaecati iure iste asperiores
+                    </p>
+
+                    <div class="button-container">
+                      <div
+                        class="modal fade"
+                        id="exampleModalToggle7"
+                        aria-hidden="true"
+                        aria-labelledby="exampleModalToggleLabel7"
+                        tabindex="-1"
+                      >
+                        <div
+                          class="modal-dialog modal-dialog-centered modal-lg"
+                        >
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1
+                                class="modal-title fs-5"
+                                id="exampleModalToggleLabel7"
+                              >
+                                Lesson one
+                              </h1>
+                              <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                              ></button>
+                            </div>
+                            <div class="modal-body">
+                              <video src="~/vidoes/1.mp4" controls></video>
+                            </div>
+                            <div class="modal-footer">
+                              <button
+                                class="btn"
+                                data-bs-target="#exampleModalToggle7"
+                                data-bs-toggle="modal"
+                              >
+                                Watched
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex">
+                        <button
+                          class="btn"
+                          data-bs-target="#exampleModalToggle7"
+                          data-bs-toggle="modal"
+                        >
+                          For Watching
+                        </button>
+                        <a href="quiz.html"
+                          ><button class="btn" data-bs-toggle="modal">
+                            Quiz
+                          </button></a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="section2">
+                  <div class="lessons">
+                    <img src="~/images/content4.jpg" />
+                    <p class="fw-bold fs-3">Lesson Two</p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Necessitatibus obcaecati iure iste asperiores
+                    </p>
+
+                    <div class="button-container">
+                      <div
+                        class="modal fade"
+                        id="exampleModalToggle8"
+                        aria-hidden="true"
+                        aria-labelledby="exampleModalToggleLabel8"
+                        tabindex="-1"
+                      >
+                        <div
+                          class="modal-dialog modal-dialog-centered modal-lg"
+                        >
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1
+                                class="modal-title fs-5"
+                                id="exampleModalToggleLabel8"
+                              >
+                                Lesson one
+                              </h1>
+                              <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                              ></button>
+                            </div>
+                            <div class="modal-body">
+                              <video src="~/vidoes/2.mp4" controls></video>
+                            </div>
+                            <div class="modal-footer">
+                              <button
+                                class="btn"
+                                data-bs-target="#exampleModalToggle8"
+                                data-bs-toggle="modal"
+                              >
+                                Watched
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex">
+                        <button
+                          class="btn"
+                          data-bs-target="#exampleModalToggle8"
+                          data-bs-toggle="modal"
+                        >
+                          For Watching
+                        </button>
+                        <a href="quiz.html"
+                          ><button class="btn" data-bs-toggle="modal">
+                            Quiz
+                          </button></a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="section3">
+                  <div class="lessons">
+                    <img src="~/images/content4.jpg" />
+                    <p class="fw-bold fs-3">Lesson Three</p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Necessitatibus obcaecati iure iste asperiores
+                    </p>
+
+                    <div class="button-container">
+                      <div
+                        class="modal fade"
+                        id="exampleModalToggle9"
+                        aria-hidden="true"
+                        aria-labelledby="exampleModalToggleLabel9"
+                        tabindex="-1"
+                      >
+                        <div
+                          class="modal-dialog modal-dialog-centered modal-lg"
+                        >
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1
+                                class="modal-title fs-5"
+                                id="exampleModalToggleLabel9"
+                              >
+                                Lesson one
+                              </h1>
+                              <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                              ></button>
+                            </div>
+                            <div class="modal-body">
+                              <video src="~/vidoes/3.mp4" controls></video>
+                            </div>
+                            <div class="modal-footer">
+                              <button
+                                class="btn"
+                                data-bs-target="#exampleModalToggle9"
+                                data-bs-toggle="modal"
+                              >
+                                Watched
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex">
+                        <button
+                          class="btn"
+                          data-bs-target="#exampleModalToggle9"
+                          data-bs-toggle="modal"
+                        >
+                          For Watching
+                        </button>
+                        <a href="quiz.html"
+                          ><button class="btn" data-bs-toggle="modal">
+                            Quiz
+                          </button></a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="section4">
+                  <div class="lessons">
+                    <img src="~/images/content4.jpg" />
+                    <p class="fw-bold fs-3">Lesson Four</p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Necessitatibus obcaecati iure iste asperiores
+                    </p>
+
+                    <div class="button-container">
+                      <div
+                        class="modal fade"
+                        id="exampleModalToggle10"
+                        aria-hidden="true"
+                        aria-labelledby="exampleModalToggleLabel10"
+                        tabindex="-1"
+                      >
+                        <div
+                          class="modal-dialog modal-dialog-centered modal-lg"
+                        >
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1
+                                class="modal-title fs-5"
+                                id="exampleModalToggleLabel10"
+                              >
+                                Lesson one
+                              </h1>
+                              <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                              ></button>
+                            </div>
+                            <div class="modal-body">
+                              <video src="~/vidoes/4.mp4" controls></video>
+                            </div>
+                            <div class="modal-footer">
+                              <button
+                                class="btn"
+                                data-bs-target="#exampleModalToggle10"
+                                data-bs-toggle="modal"
+                              >
+                                Watched
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex">
+                        <button
+                          class="btn"
+                          data-bs-target="#exampleModalToggle10"
+                          data-bs-toggle="modal"
+                        >
+                          For Watching
+                        </button>
+                        <a href="quiz.html"
+                          ><button class="btn" data-bs-toggle="modal">
+                            Quiz
+                          </button></a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="section5">
+                  <div class="lessons">
+                    <img src="~/images/content4.jpg" />
+                    <p class="fw-bold fs-3">Lesson Five</p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Necessitatibus obcaecati iure iste asperiores
+                    </p>
+
+                    <div class="button-container">
+                      <div
+                        class="modal fade"
+                        id="exampleModalToggle11"
+                        aria-hidden="true"
+                        aria-labelledby="exampleModalToggleLabel11"
+                        tabindex="-1"
+                      >
+                        <div
+                          class="modal-dialog modal-dialog-centered modal-lg"
+                        >
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1
+                                class="modal-title fs-5"
+                                id="exampleModalToggleLabel11"
+                              >
+                                Lesson one
+                              </h1>
+                              <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                              ></button>
+                            </div>
+                            <div class="modal-body">
+                              <video src="~/vidoes/5.mp4" controls></video>
+                            </div>
+                            <div class="modal-footer">
+                              <button
+                                class="btn"
+                                data-bs-target="#exampleModalToggle11"
+                                data-bs-toggle="modal"
+                              >
+                                Watched
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex">
+                        <button
+                          class="btn"
+                          data-bs-target="#exampleModalToggle11"
+                          data-bs-toggle="modal"
+                        >
+                          For Watching
+                        </button>
+                        <a href="quiz.html"
+                          ><button class="btn" data-bs-toggle="modal">
+                            Quiz
+                          </button></a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="section6">
+                  <div class="lessons">
+                    <img src="~/images/content4.jpg" />
+                    <p class="fw-bold fs-3">Lesson Six</p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Necessitatibus obcaecati iure iste asperiores
+                    </p>
+
+                    <div class="button-container">
+                      <div
+                        class="modal fade"
+                        id="exampleModalToggle12"
+                        aria-hidden="true"
+                        aria-labelledby="exampleModalToggleLabel12"
+                        tabindex="-1"
+                      >
+                        <div
+                          class="modal-dialog modal-dialog-centered modal-lg"
+                        >
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1
+                                class="modal-title fs-5"
+                                id="exampleModalToggleLabel12"
+                              >
+                                Lesson one
+                              </h1>
+                              <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                              ></button>
+                            </div>
+                            <div class="modal-body">
+                              <video src="~/vidoes/6.mp4" controls></video>
+                            </div>
+                            <div class="modal-footer">
+                              <button
+                                class="btn"
+                                data-bs-target="#exampleModalToggle12"
+                                data-bs-toggle="modal"
+                              >
+                                Watched
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex">
+                        <button
+                          class="btn"
+                          data-bs-target="#exampleModalToggle12"
+                          data-bs-toggle="modal"
+                        >
+                          For Watching
+                        </button>
+                        <a href="quiz.html"
+                          ><button class="btn" data-bs-toggle="modal">
+                            Quiz
+                          </button></a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </main>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="pills-contact"
+              role="tabpanel"
+              aria-labelledby="pills-contact-tab"
+              tabindex="0"
+            >
+              <main>
+                <div class="section1">
+                  <div class="lessons">
+                    <img src="~/images/content7.jpg" />
+                    <p class="fw-bold fs-3">Lesson One</p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Necessitatibus obcaecati iure iste asperiores
+                    </p>
+
+                    <div class="button-container">
+                      <div
+                        class="modal fade"
+                        id="exampleModalToggle13"
+                        aria-hidden="true"
+                        aria-labelledby="exampleModalToggleLabel13"
+                        tabindex="-1"
+                      >
+                        <div
+                          class="modal-dialog modal-dialog-centered modal-lg"
+                        >
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1
+                                class="modal-title fs-5"
+                                id="exampleModalToggleLabel13"
+                              >
+                                Lesson one
+                              </h1>
+                              <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                              ></button>
+                            </div>
+                            <div class="modal-body">
+                              <video src="~/vidoes/7.mp4" controls></video>
+                            </div>
+                            <div class="modal-footer">
+                              <button
+                                class="btn"
+                                data-bs-target="#exampleModalToggle13"
+                                data-bs-toggle="modal"
+                              >
+                                Watched
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex">
+                        <button
+                          class="btn"
+                          data-bs-target="#exampleModalToggle13"
+                          data-bs-toggle="modal"
+                        >
+                          For Watching
+                        </button>
+                        <a href="quiz.html"
+                          ><button class="btn" data-bs-toggle="modal">
+                            Quiz
+                          </button></a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="section2">
+                  <div class="lessons">
+                    <img src="~/images/content7.jpg" />
+                    <p class="fw-bold fs-3">Lesson Two</p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Necessitatibus obcaecati iure iste asperiores
+                    </p>
+
+                    <div class="button-container">
+                      <div
+                        class="modal fade"
+                        id="exampleModalToggle14"
+                        aria-hidden="true"
+                        aria-labelledby="exampleModalToggleLabel14"
+                        tabindex="-1"
+                      >
+                        <div
+                          class="modal-dialog modal-dialog-centered modal-lg"
+                        >
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1
+                                class="modal-title fs-5"
+                                id="exampleModalToggleLabel14"
+                              >
+                                Lesson one
+                              </h1>
+                              <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                              ></button>
+                            </div>
+                            <div class="modal-body">
+                              <video src="~/vidoes/1.mp4" controls></video>
+                            </div>
+                            <div class="modal-footer">
+                              <button
+                                class="btn"
+                                data-bs-target="#exampleModalToggle14"
+                                data-bs-toggle="modal"
+                              >
+                                Watched
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex">
+                        <button
+                          class="btn"
+                          data-bs-target="#exampleModalToggle14"
+                          data-bs-toggle="modal"
+                        >
+                          For Watching
+                        </button>
+                        <a href="quiz.html"
+                          ><button class="btn" data-bs-toggle="modal">
+                            Quiz
+                          </button></a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="section3">
+                  <div class="lessons">
+                    <img src="~/images/content7.jpg" />
+                    <p class="fw-bold fs-3">Lesson Three</p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Necessitatibus obcaecati iure iste asperiores
+                    </p>
+
+                    <div class="button-container">
+                      <div
+                        class="modal fade"
+                        id="exampleModalToggle15"
+                        aria-hidden="true"
+                        aria-labelledby="exampleModalToggleLabel15"
+                        tabindex="-1"
+                      >
+                        <div
+                          class="modal-dialog modal-dialog-centered modal-lg"
+                        >
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1
+                                class="modal-title fs-5"
+                                id="exampleModalToggleLabel15"
+                              >
+                                Lesson one
+                              </h1>
+                              <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                              ></button>
+                            </div>
+                            <div class="modal-body">
+                              <video src="~/vidoes/1.mp4" controls></video>
+                            </div>
+                            <div class="modal-footer">
+                              <button
+                                class="btn"
+                                data-bs-target="#exampleModalToggle15"
+                                data-bs-toggle="modal"
+                              >
+                                Watched
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex">
+                        <button
+                          class="btn"
+                          data-bs-target="#exampleModalToggle15"
+                          data-bs-toggle="modal"
+                        >
+                          For Watching
+                        </button>
+                        <a href="quiz.html"
+                          ><button class="btn" data-bs-toggle="modal">
+                            Quiz
+                          </button></a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="section4">
+                  <div class="lessons">
+                    <img src="~/images/content7.jpg" />
+                    <p class="fw-bold fs-3">Lesson Four</p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Necessitatibus obcaecati iure iste asperiores
+                    </p>
+
+                    <div class="button-container">
+                      <div
+                        class="modal fade"
+                        id="exampleModalToggle16"
+                        aria-hidden="true"
+                        aria-labelledby="exampleModalToggleLabel16"
+                        tabindex="-1"
+                      >
+                        <div
+                          class="modal-dialog modal-dialog-centered modal-lg"
+                        >
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1
+                                class="modal-title fs-5"
+                                id="exampleModalToggleLabel16"
+                              >
+                                Lesson one
+                              </h1>
+                              <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                              ></button>
+                            </div>
+                            <div class="modal-body">
+                              <video src="~/vidoes/1.mp4" controls></video>
+                            </div>
+                            <div class="modal-footer">
+                              <button
+                                class="btn"
+                                data-bs-target="#exampleModalToggle16"
+                                data-bs-toggle="modal"
+                              >
+                                Watched
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex">
+                        <button
+                          class="btn"
+                          data-bs-target="#exampleModalToggle16"
+                          data-bs-toggle="modal"
+                        >
+                          For Watching
+                        </button>
+                        <a href="quiz.html"
+                          ><button class="btn" data-bs-toggle="modal">
+                            Quiz
+                          </button></a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="section5">
+                  <div class="lessons">
+                    <img src="~/images/content7.jpg" />
+                    <p class="fw-bold fs-3">Lesson Five</p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Necessitatibus obcaecati iure iste asperiores
+                    </p>
+
+                    <div class="button-container">
+                      <div
+                        class="modal fade"
+                        id="exampleModalToggle17"
+                        aria-hidden="true"
+                        aria-labelledby="exampleModalToggleLabel17"
+                        tabindex="-1"
+                      >
+                        <div
+                          class="modal-dialog modal-dialog-centered modal-lg"
+                        >
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1
+                                class="modal-title fs-5"
+                                id="exampleModalToggleLabel17"
+                              >
+                                Lesson one
+                              </h1>
+                              <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                              ></button>
+                            </div>
+                            <div class="modal-body">
+                              <video src="~/vidoes/1.mp4" controls></video>
+                            </div>
+                            <div class="modal-footer">
+                              <button
+                                class="btn"
+                                data-bs-target="#exampleModalToggle17"
+                                data-bs-toggle="modal"
+                              >
+                                Watched
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex">
+                        <button
+                          class="btn"
+                          data-bs-target="#exampleModalToggle17"
+                          data-bs-toggle="modal"
+                        >
+                          For Watching
+                        </button>
+                        <a href="quiz.html"
+                          ><button class="btn" data-bs-toggle="modal">
+                            Quiz
+                          </button></a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="section6">
+                  <div class="lessons">
+                    <img src="~/images/content7.jpg" />
+                    <p class="fw-bold fs-3">Lesson Six</p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Necessitatibus obcaecati iure iste asperiores
+                    </p>
+
+                    <div class="button-container">
+                      <div
+                        class="modal fade"
+                        id="exampleModalToggle18"
+                        aria-hidden="true"
+                        aria-labelledby="exampleModalToggleLabel18"
+                        tabindex="-1"
+                      >
+                        <div
+                          class="modal-dialog modal-dialog-centered modal-lg"
+                        >
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1
+                                class="modal-title fs-5"
+                                id="exampleModalToggleLabel18"
+                              >
+                                Lesson one
+                              </h1>
+                              <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                              ></button>
+                            </div>
+                            <div class="modal-body">
+                              <video src="~/vidoes/5.mp4" controls></video>
+                            </div>
+                            <div class="modal-footer">
+                              <button
+                                class="btn"
+                                data-bs-target="#exampleModalToggle18"
+                                data-bs-toggle="modal"
+                              >
+                                Watched
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex">
+                        <button
+                          class="btn"
+                          data-bs-target="#exampleModalToggle18"
+                          data-bs-toggle="modal"
+                        >
+                          For Watching
+                        </button>
+                        <a href="quiz.html"
+                          ><button class="btn" data-bs-toggle="modal">
+                            Quiz
+                          </button></a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </main>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="pills-month4"
+              role="tabpanel"
+              aria-labelledby="pills-month4"
+              tabindex="0"
+            >
+              <main>
+                <div class="section1">
+                  <div class="lessons">
+                    <img src="~/images/content5.jpg" />
+                    <p class="fw-bold fs-3">Lesson One</p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Necessitatibus obcaecati iure iste asperiores
+                    </p>
+
+                    <div class="button-container">
+                      <div
+                        class="modal fade"
+                        id="exampleModalToggle19"
+                        aria-hidden="true"
+                        aria-labelledby="exampleModalToggleLabel19"
+                        tabindex="-1"
+                      >
+                        <div
+                          class="modal-dialog modal-dialog-centered modal-lg"
+                        >
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1
+                                class="modal-title fs-5"
+                                id="exampleModalToggleLabel19"
+                              >
+                                Lesson one
+                              </h1>
+                              <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                              ></button>
+                            </div>
+                            <div class="modal-body">
+                              <video src="~/vidoes/6.mp4" controls></video>
+                            </div>
+                            <div class="modal-footer">
+                              <button
+                                class="btn"
+                                data-bs-target="#exampleModalToggle19"
+                                data-bs-toggle="modal"
+                              >
+                                Watched
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex">
+                        <button
+                          class="btn"
+                          data-bs-target="#exampleModalToggle19"
+                          data-bs-toggle="modal"
+                        >
+                          For Watching
+                        </button>
+                        <a href="quiz.html"
+                          ><button class="btn" data-bs-toggle="modal">
+                            Quiz
+                          </button></a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="section2">
+                  <div class="lessons">
+                    <img src="~/images/content5.jpg" />
+                    <p class="fw-bold fs-3">Lesson Two</p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Necessitatibus obcaecati iure iste asperiores
+                    </p>
+
+                    <div class="button-container">
+                      <div
+                        class="modal fade"
+                        id="exampleModalToggle20"
+                        aria-hidden="true"
+                        aria-labelledby="exampleModalToggleLabel20"
+                        tabindex="-1"
+                      >
+                        <div
+                          class="modal-dialog modal-dialog-centered modal-lg"
+                        >
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1
+                                class="modal-title fs-5"
+                                id="exampleModalToggleLabel20"
+                              >
+                                Lesson one
+                              </h1>
+                              <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                              ></button>
+                            </div>
+                            <div class="modal-body">
+                              <video src="~/vidoes/7.mp4" controls></video>
+                            </div>
+                            <div class="modal-footer">
+                              <button
+                                class="btn"
+                                data-bs-target="#exampleModalToggle20"
+                                data-bs-toggle="modal"
+                              >
+                                Watched
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex">
+                        <button
+                          class="btn"
+                          data-bs-target="#exampleModalToggle20"
+                          data-bs-toggle="modal"
+                        >
+                          For Watching
+                        </button>
+                        <a href="quiz.html"
+                          ><button class="btn" data-bs-toggle="modal">
+                            Quiz
+                          </button></a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="section3">
+                  <div class="lessons">
+                    <img src="~/images/content5.jpg" />
+                    <p class="fw-bold fs-3">Lesson Three</p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Necessitatibus obcaecati iure iste asperiores
+                    </p>
+
+                    <div class="button-container">
+                      <div
+                        class="modal fade"
+                        id="exampleModalToggle21"
+                        aria-hidden="true"
+                        aria-labelledby="exampleModalToggleLabel21"
+                        tabindex="-1"
+                      >
+                        <div
+                          class="modal-dialog modal-dialog-centered modal-lg"
+                        >
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1
+                                class="modal-title fs-5"
+                                id="exampleModalToggleLabel21"
+                              >
+                                Lesson one
+                              </h1>
+                              <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                              ></button>
+                            </div>
+                            <div class="modal-body">
+                              <video src="~/vidoes/1.mp4" controls></video>
+                            </div>
+                            <div class="modal-footer">
+                              <button
+                                class="btn"
+                                data-bs-target="#exampleModalToggle21"
+                                data-bs-toggle="modal"
+                              >
+                                Watched
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex">
+                        <button
+                          class="btn"
+                          data-bs-target="#exampleModalToggle21"
+                          data-bs-toggle="modal"
+                        >
+                          For Watching
+                        </button>
+                        <a href="quiz.html"
+                          ><button class="btn" data-bs-toggle="modal">
+                            Quiz
+                          </button></a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="section4">
+                  <div class="lessons">
+                    <img src="~/images/content5.jpg" />
+                    <p class="fw-bold fs-3">Lesson Four</p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Necessitatibus obcaecati iure iste asperiores
+                    </p>
+
+                    <div class="button-container">
+                      <div
+                        class="modal fade"
+                        id="exampleModalToggle22"
+                        aria-hidden="true"
+                        aria-labelledby="exampleModalToggleLabel22"
+                        tabindex="-1"
+                      >
+                        <div
+                          class="modal-dialog modal-dialog-centered modal-lg"
+                        >
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1
+                                class="modal-title fs-5"
+                                id="exampleModalToggleLabel22"
+                              >
+                                Lesson one
+                              </h1>
+                              <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                              ></button>
+                            </div>
+                            <div class="modal-body">
+                              <video src="~/vidoes/2.mp4" controls></video>
+                            </div>
+                            <div class="modal-footer">
+                              <button
+                                class="btn"
+                                data-bs-target="#exampleModalToggle22"
+                                data-bs-toggle="modal"
+                              >
+                                Watched
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex">
+                        <button
+                          class="btn"
+                          data-bs-target="#exampleModalToggle22"
+                          data-bs-toggle="modal"
+                        >
+                          For Watching
+                        </button>
+                        <a href="quiz.html"
+                          ><button class="btn" data-bs-toggle="modal">
+                            Quiz
+                          </button></a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="section5">
+                  <div class="lessons">
+                    <img src="~/images/content5.jpg" />
+                    <p class="fw-bold fs-3">Lesson Five</p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Necessitatibus obcaecati iure iste asperiores
+                    </p>
+
+                    <div class="button-container">
+                      <div
+                        class="modal fade"
+                        id="exampleModalToggle23"
+                        aria-hidden="true"
+                        aria-labelledby="exampleModalToggleLabel23"
+                        tabindex="-1"
+                      >
+                        <div
+                          class="modal-dialog modal-dialog-centered modal-lg"
+                        >
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1
+                                class="modal-title fs-5"
+                                id="exampleModalToggleLabel23"
+                              >
+                                Lesson one
+                              </h1>
+                              <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                              ></button>
+                            </div>
+                            <div class="modal-body">
+                              <video src="~/vidoes/3.mp4" controls></video>
+                            </div>
+                            <div class="modal-footer">
+                              <button
+                                class="btn"
+                                data-bs-target="#exampleModalToggle23"
+                                data-bs-toggle="modal"
+                              >
+                                Watched
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex">
+                        <button
+                          class="btn"
+                          data-bs-target="#exampleModalToggle23"
+                          data-bs-toggle="modal"
+                        >
+                          For Watching
+                        </button>
+                        <a href="quiz.html"
+                          ><button class="btn" data-bs-toggle="modal">
+                            Quiz
+                          </button></a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="section6">
+                  <div class="lessons">
+                    <img src="~/images/content5.jpg" />
+                    <p class="fw-bold fs-3">Lesson Six</p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Necessitatibus obcaecati iure iste asperiores
+                    </p>
+
+                    <div class="button-container">
+                      <div
+                        class="modal fade"
+                        id="exampleModalToggle24"
+                        aria-hidden="true"
+                        aria-labelledby="exampleModalToggleLabel24"
+                        tabindex="-1"
+                      >
+                        <div
+                          class="modal-dialog modal-dialog-centered modal-lg"
+                        >
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1
+                                class="modal-title fs-5"
+                                id="exampleModalToggleLabel24"
+                              >
+                                Lesson one
+                              </h1>
+                              <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                              ></button>
+                            </div>
+                            <div class="modal-body">
+                              <video src="~/vidoes/4.mp4" controls></video>
+                            </div>
+                            <div class="modal-footer">
+                              <button
+                                class="btn"
+                                data-bs-target="#exampleModalToggle24"
+                                data-bs-toggle="modal"
+                              >
+                                Watched
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex">
+                        <button
+                          class="btn"
+                          data-bs-target="#exampleModalToggle24"
+                          data-bs-toggle="modal"
+                        >
+                          For Watching
+                        </button>
+                        <a href="quiz.html"
+                          ><button class="btn" data-bs-toggle="modal">
+                            Quiz
+                          </button></a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </main>
+            </div>
+
+            <div
+              class="tab-pane fade"
+              id="pills-month6"
+              role="tabpanel"
+              aria-labelledby="pills-month6"
+              tabindex="0"
+            >
+              <main>
+                <div class="section1">
+                  <div class="lessons">
+                    <img src="~/images/content.jpg" />
+                    <p class="fw-bold fs-3">Lesson One</p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Necessitatibus obcaecati iure iste asperiores
+                    </p>
+
+                    <div class="button-container">
+                      <div
+                        class="modal fade"
+                        id="exampleModalToggle30"
+                        aria-hidden="true"
+                        aria-labelledby="exampleModalToggleLabel30"
+                        tabindex="-1"
+                      >
+                        <div
+                          class="modal-dialog modal-dialog-centered modal-lg"
+                        >
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1
+                                class="modal-title fs-5"
+                                id="exampleModalToggleLabel30"
+                              >
+                                Lesson one
+                              </h1>
+                              <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                              ></button>
+                            </div>
+                            <div class="modal-body">
+                              <video src="~/vidoes/5.mp4" controls></video>
+                            </div>
+                            <div class="modal-footer">
+                              <button
+                                class="btn"
+                                data-bs-target="#exampleModalToggle30"
+                                data-bs-toggle="modal"
+                              >
+                                Watched
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex">
+                        <button
+                          class="btn"
+                          data-bs-target="#exampleModalToggle30"
+                          data-bs-toggle="modal"
+                        >
+                          For Watching
+                        </button>
+                        <a href="quiz.html"
+                          ><button class="btn" data-bs-toggle="modal">
+                            Quiz
+                          </button></a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="section2">
+                  <div class="lessons">
+                    <img src="~/images/content.jpg" />
+                    <p class="fw-bold fs-3">Lesson Two</p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Necessitatibus obcaecati iure iste asperiores
+                    </p>
+
+                    <div class="button-container">
+                      <div
+                        class="modal fade"
+                        id="exampleModalToggle32"
+                        aria-hidden="true"
+                        aria-labelledby="exampleModalToggleLabel32"
+                        tabindex="-1"
+                      >
+                        <div
+                          class="modal-dialog modal-dialog-centered modal-lg"
+                        >
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1
+                                class="modal-title fs-5"
+                                id="exampleModalToggleLabel32"
+                              >
+                                Lesson one
+                              </h1>
+                              <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                              ></button>
+                            </div>
+                            <div class="modal-body">
+                              <video src="~/vidoes/6.mp4" controls></video>
+                            </div>
+                            <div class="modal-footer">
+                              <button
+                                class="btn"
+                                data-bs-target="#exampleModalToggle32"
+                                data-bs-toggle="modal"
+                              >
+                                Watched
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex">
+                        <button
+                          class="btn"
+                          data-bs-target="#exampleModalToggle32"
+                          data-bs-toggle="modal"
+                        >
+                          For Watching
+                        </button>
+                        <a href="quiz.html"
+                          ><button class="btn" data-bs-toggle="modal">
+                            Quiz
+                          </button></a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="section3">
+                  <div class="lessons">
+                    <img src="~/images/content.jpg" />
+                    <p class="fw-bold fs-3">Lesson Three</p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Necessitatibus obcaecati iure iste asperiores
+                    </p>
+
+                    <div class="button-container">
+                      <div
+                        class="modal fade"
+                        id="exampleModalToggle33"
+                        aria-hidden="true"
+                        aria-labelledby="exampleModalToggleLabel33"
+                        tabindex="-1"
+                      >
+                        <div
+                          class="modal-dialog modal-dialog-centered modal-lg"
+                        >
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1
+                                class="modal-title fs-5"
+                                id="exampleModalToggleLabel33"
+                              >
+                                Lesson one
+                              </h1>
+                              <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                              ></button>
+                            </div>
+                            <div class="modal-body">
+                              <video src="~/vidoes/7.mp4" controls></video>
+                            </div>
+                            <div class="modal-footer">
+                              <button
+                                class="btn"
+                                data-bs-target="#exampleModalToggle33"
+                                data-bs-toggle="modal"
+                              >
+                                Watched
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex">
+                        <button
+                          class="btn"
+                          data-bs-target="#exampleModalToggle33"
+                          data-bs-toggle="modal"
+                        >
+                          For Watching
+                        </button>
+                        <a href="quiz.html"
+                          ><button class="btn" data-bs-toggle="modal">
+                            Quiz
+                          </button></a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="section4">
+                  <div class="lessons">
+                    <img src="~/images/content.jpg" />
+                    <p class="fw-bold fs-3">Lesson Four</p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Necessitatibus obcaecati iure iste asperiores
+                    </p>
+
+                    <div class="button-container">
+                      <div
+                        class="modal fade"
+                        id="exampleModalToggle34"
+                        aria-hidden="true"
+                        aria-labelledby="exampleModalToggleLabel34"
+                        tabindex="-1"
+                      >
+                        <div
+                          class="modal-dialog modal-dialog-centered modal-lg"
+                        >
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1
+                                class="modal-title fs-5"
+                                id="exampleModalToggleLabel34"
+                              >
+                                Lesson one
+                              </h1>
+                              <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                              ></button>
+                            </div>
+                            <div class="modal-body">
+                              <video src="~/vidoes/1.mp4" controls></video>
+                            </div>
+                            <div class="modal-footer">
+                              <button
+                                class="btn"
+                                data-bs-target="#exampleModalToggle34"
+                                data-bs-toggle="modal"
+                              >
+                                Watched
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex">
+                        <button
+                          class="btn"
+                          data-bs-target="#exampleModalToggle34"
+                          data-bs-toggle="modal"
+                        >
+                          For Watching
+                        </button>
+                        <a href="quiz.html"
+                          ><button class="btn" data-bs-toggle="modal">
+                            Quiz
+                          </button></a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="section5">
+                  <div class="lessons">
+                    <img src="~/images/content.jpg" />
+                    <p class="fw-bold fs-3">Lesson Five</p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Necessitatibus obcaecati iure iste asperiores
+                    </p>
+
+                    <div class="button-container">
+                      <div
+                        class="modal fade"
+                        id="exampleModalToggle35"
+                        aria-hidden="true"
+                        aria-labelledby="exampleModalToggleLabel35"
+                        tabindex="-1"
+                      >
+                        <div
+                          class="modal-dialog modal-dialog-centered modal-lg"
+                        >
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1
+                                class="modal-title fs-5"
+                                id="exampleModalToggleLabel35"
+                              >
+                                Lesson one
+                              </h1>
+                              <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                              ></button>
+                            </div>
+                            <div class="modal-body">
+                              <video src="~/vidoes/2.mp4" controls></video>
+                            </div>
+                            <div class="modal-footer">
+                              <button
+                                class="btn"
+                                data-bs-target="#exampleModalToggle35"
+                                data-bs-toggle="modal"
+                              >
+                                Watched
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex">
+                        <button
+                          class="btn"
+                          data-bs-target="#exampleModalToggle35"
+                          data-bs-toggle="modal"
+                        >
+                          For Watching
+                        </button>
+                        <a href="quiz.html"
+                          ><button class="btn" data-bs-toggle="modal">
+                            Quiz
+                          </button></a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="section6">
+                  <div class="lessons">
+                    <img src="~/images/content.jpg" />
+                    <p class="fw-bold fs-3">Lesson Six</p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Necessitatibus obcaecati iure iste asperiores
+                    </p>
+
+                    <div class="button-container">
+                      <div
+                        class="modal fade"
+                        id="exampleModalToggle36"
+                        aria-hidden="true"
+                        aria-labelledby="exampleModalToggleLabel36"
+                        tabindex="-1"
+                      >
+                        <div
+                          class="modal-dialog modal-dialog-centered modal-lg"
+                        >
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1
+                                class="modal-title fs-5"
+                                id="exampleModalToggleLabel36"
+                              >
+                                Lesson one
+                              </h1>
+                              <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                              ></button>
+                            </div>
+                            <div class="modal-body">
+                              <video src="~/vidoes/3.mp4" controls></video>
+                            </div>
+                            <div class="modal-footer">
+                              <button
+                                class="btn"
+                                data-bs-target="#exampleModalToggle36"
+                                data-bs-toggle="modal"
+                              >
+                                Watched
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex">
+                        <button
+                          class="btn"
+                          data-bs-target="#exampleModalToggle36"
+                          data-bs-toggle="modal"
+                        >
+                          For Watching
+                        </button>
+                        <a href="quiz.html"
+                          ><button class="btn" data-bs-toggle="modal">
+                            Quiz
+                          </button></a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </main>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="pills-month5"
+              role="tabpanel"
+              aria-labelledby="pills-month5"
+              tabindex="0"
+            >
+              <main>
+                <div class="section1">
+                  <div class="lessons">
+                    <img src="~/images/content2.jpg" />
+                    <p class="fw-bold fs-3">Lesson One</p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Necessitatibus obcaecati iure iste asperiores
+                    </p>
+
+                    <div class="button-container">
+                      <div
+                        class="modal fade"
+                        id="exampleModalToggle40"
+                        aria-hidden="true"
+                        aria-labelledby="exampleModalToggleLabel40"
+                        tabindex="-1"
+                      >
+                        <div
+                          class="modal-dialog modal-dialog-centered modal-lg"
+                        >
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1
+                                class="modal-title fs-5"
+                                id="exampleModalToggleLabel40"
+                              >
+                                Lesson one
+                              </h1>
+                              <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                              ></button>
+                            </div>
+                            <div class="modal-body">
+                              <video src="~/vidoes/4.mp4" controls></video>
+                            </div>
+                            <div class="modal-footer">
+                              <button
+                                class="btn"
+                                data-bs-target="#exampleModalToggle40"
+                                data-bs-toggle="modal"
+                              >
+                                Watched
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex">
+                        <button
+                          class="btn"
+                          data-bs-target="#exampleModalToggle40"
+                          data-bs-toggle="modal"
+                        >
+                          For Watching
+                        </button>
+                        <a href="quiz.html">
+                          <a href="quiz.html"
+                            ><button class="btn" data-bs-toggle="modal">
+                              Quiz
+                            </button></a
+                          >
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="section2">
+                  <div class="lessons">
+                    <img src="~/images/content2.jpg" />
+                    <p class="fw-bold fs-3">Lesson Two</p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Necessitatibus obcaecati iure iste asperiores
+                    </p>
+
+                    <div class="button-container">
+                      <div
+                        class="modal fade"
+                        id="exampleModalToggle41"
+                        aria-hidden="true"
+                        aria-labelledby="exampleModalToggleLabel41"
+                        tabindex="-1"
+                      >
+                        <div
+                          class="modal-dialog modal-dialog-centered modal-lg"
+                        >
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1
+                                class="modal-title fs-5"
+                                id="exampleModalToggleLabel41"
+                              >
+                                Lesson one
+                              </h1>
+                              <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                              ></button>
+                            </div>
+                            <div class="modal-body">
+                              <video src="~/vidoes/5.mp4" controls></video>
+                            </div>
+                            <div class="modal-footer">
+                              <button
+                                class="btn"
+                                data-bs-target="#exampleModalToggle41"
+                                data-bs-toggle="modal"
+                              >
+                                Watched
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex">
+                        <button
+                          class="btn"
+                          data-bs-target="#exampleModalToggle41"
+                          data-bs-toggle="modal"
+                        >
+                          For Watching
+                        </button>
+                        <a href="quiz.html"
+                          ><button class="btn" data-bs-toggle="modal">
+                            Quiz
+                          </button></a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="section3">
+                  <div class="lessons">
+                    <img src="~/images/content2.jpg" />
+                    <p class="fw-bold fs-3">Lesson Three</p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Necessitatibus obcaecati iure iste asperiores
+                    </p>
+
+                    <div class="button-container">
+                      <div
+                        class="modal fade"
+                        id="exampleModalToggle42"
+                        aria-hidden="true"
+                        aria-labelledby="exampleModalToggleLabel42"
+                        tabindex="-1"
+                      >
+                        <div
+                          class="modal-dialog modal-dialog-centered modal-lg"
+                        >
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1
+                                class="modal-title fs-5"
+                                id="exampleModalToggleLabel42"
+                              >
+                                Lesson one
+                              </h1>
+                              <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                              ></button>
+                            </div>
+                            <div class="modal-body">
+                              <video src="~/vidoes/6.mp4" controls></video>
+                            </div>
+                            <div class="modal-footer">
+                              <button
+                                class="btn"
+                                data-bs-target="#exampleModalToggle42"
+                                data-bs-toggle="modal"
+                              >
+                                Watched
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex">
+                        <button
+                          class="btn"
+                          data-bs-target="#exampleModalToggle42"
+                          data-bs-toggle="modal"
+                        >
+                          For Watching
+                        </button>
+                        <button class="btn" data-bs-toggle="modal">Quiz</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="section4">
+                  <div class="lessons">
+                    <img src="~/images/content2.jpg" />
+                    <p class="fw-bold fs-3">Lesson Four</p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Necessitatibus obcaecati iure iste asperiores
+                    </p>
+
+                    <div class="button-container">
+                      <div
+                        class="modal fade"
+                        id="exampleModalToggle44"
+                        aria-hidden="true"
+                        aria-labelledby="exampleModalToggleLabel44"
+                        tabindex="-1"
+                      >
+                        <div
+                          class="modal-dialog modal-dialog-centered modal-lg"
+                        >
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1
+                                class="modal-title fs-5"
+                                id="exampleModalToggleLabel44"
+                              >
+                                Lesson one
+                              </h1>
+                              <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                              ></button>
+                            </div>
+                            <div class="modal-body">
+                              <video src="~/vidoes/7.mp4" controls></video>
+                            </div>
+                            <div class="modal-footer">
+                              <button
+                                class="btn"
+                                data-bs-target="#exampleModalToggle44"
+                                data-bs-toggle="modal"
+                              >
+                                Watched
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex">
+                        <button
+                          class="btn"
+                          data-bs-target="#exampleModalToggle44"
+                          data-bs-toggle="modal"
+                        >
+                          For Watching
+                        </button>
+                        <button class="btn" data-bs-toggle="modal">Quiz</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="section5">
+                  <div class="lessons">
+                    <img src="~/images/content2.jpg" />
+                    <p class="fw-bold fs-3">Lesson Five</p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Necessitatibus obcaecati iure iste asperiores
+                    </p>
+
+                    <div class="button-container">
+                      <div
+                        class="modal fade"
+                        id="exampleModalToggle45"
+                        aria-hidden="true"
+                        aria-labelledby="exampleModalToggleLabel45"
+                        tabindex="-1"
+                      >
+                        <div
+                          class="modal-dialog modal-dialog-centered modal-lg"
+                        >
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1
+                                class="modal-title fs-5"
+                                id="exampleModalToggleLabel45"
+                              >
+                                Lesson one
+                              </h1>
+                              <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                              ></button>
+                            </div>
+                            <div class="modal-body">
+                              <video src="~/vidoes/1.mp4" controls></video>
+                            </div>
+                            <div class="modal-footer">
+                              <button
+                                class="btn"
+                                data-bs-target="#exampleModalToggle45"
+                                data-bs-toggle="modal"
+                              >
+                                Watched
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex">
+                        <button
+                          class="btn"
+                          data-bs-target="#exampleModalToggle45"
+                          data-bs-toggle="modal"
+                        >
+                          For Watching
+                        </button>
+                        <button class="btn" data-bs-toggle="modal">Quiz</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="section6">
+                  <div class="lessons">
+                    <img src="~/images/content2.jpg" />
+                    <p class="fw-bold fs-3">Lesson Six</p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Necessitatibus obcaecati iure iste asperiores
+                    </p>
+
+                    <div class="button-container">
+                      <div
+                        class="modal fade"
+                        id="exampleModalToggle38"
+                        aria-hidden="true"
+                        aria-labelledby="exampleModalToggleLabel38"
+                        tabindex="-1"
+                      >
+                        <div
+                          class="modal-dialog modal-dialog-centered modal-lg"
+                        >
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1
+                                class="modal-title fs-5"
+                                id="exampleModalToggleLabel38"
+                              >
+                                Lesson one
+                              </h1>
+                              <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                              ></button>
+                            </div>
+                            <div class="modal-body">
+                              <video src="~/vidoes/2.mp4" controls></video>
+                            </div>
+                            <div class="modal-footer">
+                              <button
+                                class="btn"
+                                data-bs-target="#exampleModalToggle38"
+                                data-bs-toggle="modal"
+                              >
+                                Watched
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex">
+                        <button
+                          class="btn"
+                          data-bs-target="#exampleModalToggle38"
+                          data-bs-toggle="modal"
+                        >
+                          For Watching
+                        </button>
+                        <button class="btn" data-bs-toggle="modal">Quiz</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </main>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer id="footer">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Contact us</h3>
+
+            <ul>
+              <li>
+                <img src="~/images/right.svg" class="footer-arrow" /> Kafr
+                el-sheikh
+              </li>
+              <li><img src="~/images/right.svg" class="footer-arrow" /> Egypt</li>
+              <li>
+                <img src="~/images/right.svg" class="footer-arrow" />
+                +201013706142
+              </li>
+              <li>
+                <img src="~/images/right.svg" class="footer-arrow" />
+                abdelkadermoamed@gmail.com
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3>Follow us</h3>
+            <div class="social-icons">
+              <a href="#" target="arrow">
+                <img src="~/images/facebook.png" alt="Facebook" />
+              </a>
+
+              <a href="#" target="_blank">
+                <img src="~/images/instagram.png" alt="Instagram" />
+              </a>
+
+              <a href="#" target="_blank">
+                <img src="~/images/youtube.png" alt="youtube" />
+              </a>
+
+              <a href="#" target="_blank">
+                <img src="~/images/twitter.png" alt="twitter" />
+              </a>
+
+              <a href="#" target="_blank">
+                <img src="~/images/whatsapp.png" alt="WhatsApp" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div class="login section" id="login">
+        <img id="close" src="~/images/close.svg" />
+        <div class="container">
+          <div class="row full-height justify-content-center">
+            <div class="col-12 text-center align-self-center py-5">
+              <div class="section pb-5 pt-5 pt-sm-2 text-center">
+                <h6 class="mb-0 pb-3">
+                  <span>Log In </span><span>Sign Up</span>
+                </h6>
+                <input
+                  class="checkbox"
+                  type="checkbox"
+                  id="reg-log"
+                  name="reg-log"
+                />
+                <label for="reg-log"></label>
+                <div class="card-3d-wrap mx-auto">
+                  <div class="card-3d-wrapper">
+                    <div class="card-front">
+                      <div class="center-wrap">
+                        <div class="section text-center">
+                          <h4 class="mb-4 pb-3">Log In</h4>
+                          <div class="form-group">
+                            <input
+                              type="email"
+                              class="form-style"
+                              placeholder="Email"
+                            />
+                            <i class="input-icon uil uil-at"></i>
+                          </div>
+                          <div class="form-group mt-2">
+                            <input
+                              type="password"
+                              class="form-style"
+                              placeholder="Password"
+                            />
+                            <i class="input-icon uil uil-lock-alt"></i>
+                          </div>
+                          <a
+                            href="###########################################"
+                            class="btn mt-4"
+                            >Login</a
+                          >
+                          <p class="mb-0 mt-4 text-center">
+                            <a
+                              href="###################################"
+                              class="link"
+                              >Forgot your password?</a
+                            >
+                          </p>
+                        </div>
+                        <div class="section photo">
+                          <img src="~/images/login4.png" />
+                        </div>
+                      </div>
+                    </div>
+                    
+                     
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="~/js/popper.min.js"></script>
+    <script src="~/js/jquery-3.7.1.min.js"></script>
+    <script src="~/js/bootstrap.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="~/js/months 1.js"></script>
+  </body>
+</html>

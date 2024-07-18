@@ -1,0 +1,144 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Storm's End</title>
+    <link rel="stylesheet" href="~/css/about-us.css" />
+</head>
+<body>
+    <div class="loader"></div>
+    <div class="background">
+        <div class="color">
+            <div class="photo">
+                <img src="~/images/levels.jpeg" class="photo-left" />
+            </div>
+            <div class="container">
+                <h1 class="title">Storm's End</h1>
+                <p class="description">30% Free</p>
+                <p class="tagline">Storm's End Content</p>
+                @if (User.Identity.IsAuthenticated == false)
+                {
+                    
+                    <a  asp-action="Login" asp-controller="Account" class="watch-link">
+                        <button class="watch-button">Watch the Content</button>
+                    </a>
+                }else
+                {
+                    <a asp-action="Months" asp-controller="Home" class="watch-link">
+                        <button class="watch-button">Watch the Content</button>
+                    </a>
+                }
+                <div class="content">
+                    <p>
+                        Storm's End is an educational platform dedicated to providing
+                        high-quality learning materials to everyone. With a commitment to
+                        accessibility, we offer 30% of our content for free, ensuring that
+                        knowledge is available to all.
+                    </p>
+                    <!-- <p>
+                      Storm's End Content offers a diverse range of courses, tutorials,
+                      and resources curated by experts in various fields. Whether you're
+                      a student, professional, or lifelong learner, you'll find valuable
+                      content to enhance your skills and expand your knowledge.
+                    </p> -->
+                    <p>
+                        Join Storm's End today and embark on a journey of discovery and
+                        growth. Watch the Content and unlock a world of learning
+                        opportunities.
+                    </p>
+                </div>
+            </div>
+            <div class="photo">
+                <img src="~/images/levels.jpeg" class="photo-right" />
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    let loader = document.querySelector(".loader");
+    let hidden = document.querySelector(".hidden");
+
+    setTimeout(function () {
+        loader.style.display = "none";
+        document.body.classList.add("appear");
+        hidden.classList.add("appear");
+    }, 2000);
+</script>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Storm's End</title>
+    <link rel="stylesheet" href="css/about-us.css" />
+  </head>
+  <body>
+    <div class="loader"></div>
+    <div class="hidden">
+      <header>
+        <h1>About <span> Storm's End </span></h1>
+      </header>
+      <div class="container">
+        <h2>Welcome to Storm's End</h2>
+        <p>
+          Storm's End is an innovative educational platform committed to
+          revolutionizing the way people learn. Our mission is to provide
+          accessible, engaging, and effective learning experiences for students
+          of all ages and backgrounds.
+        </p>
+        <h2>Our Vision</h2>
+        <p>
+          At Storm's End, we envision a world where education knows no bounds.
+          We believe that everyone has the potential to learn and grow, and we
+          strive to empower individuals to unlock their full potential through
+          our platform.
+        </p>
+        <h2>What Sets Us Apart</h2>
+        <p>
+          • Expert Instructors: Our courses are developed and taught by industry
+          experts who are passionate about sharing their knowledge and
+          experience.
+        </p>
+        <p>
+          • Interactive Learning: We utilize cutting-edge technology and
+          interactive learning tools to create engaging and immersive learning
+          experiences.
+        </p>
+        <p>
+          • Flexible Learning Options: Whether you prefer to learn at your own
+          pace or participate in live, instructor-led sessions, Storm's End
+          offers flexible learning options to suit your needs.
+        </p>
+        <p>
+          • Community Engagement: Join a vibrant community of learners where you
+          can collaborate, share insights, and connect with like-minded
+          individuals from around the globe.
+        </p>
+        <h2>Contact Us</h2>
+        <p>
+          Have questions or feedback? We'd love to hear from you! Contact our
+          support team at
+          <a href="mailto:info@stormsend.com">info@stormsend.com</a>.
+        </p>
+      </div>
+    </div>
+    <script>
+      let loader = document.querySelector(".loader");
+      let hidden = document.querySelector(".hidden");
+
+      setTimeout(function () {
+        loader.style.display = "none";
+        document.body.classList.add("appear");
+        hidden.classList.add("appear");
+      }, 2000);
+    </scrip>
+  </body>
+</html> -->

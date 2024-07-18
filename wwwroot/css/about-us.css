@@ -1,0 +1,323 @@
+:root {
+  --mov-color: rgb(132, 56, 142);
+  --grey-color: rgb(218, 218, 218);
+  --sky-color: rgb(230, 237, 250);
+  --blue-color: rgb(108, 112, 184);
+  --darkblue-color: rgba(54, 56, 94, 0.993);
+
+  --skydark: rgb(230, 237, 250);
+  --darkbluedark: rgb(54, 56, 94);
+
+  --bluebur: #20264dd2;
+
+  --gradient1: #5584ac;
+  --gradient2: #7fc7d9;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--darkblue-color);
+  background-size: cover;
+  background-position: center;
+  color: #333;
+  overflow: hidden;
+}
+
+.color {
+  display: flex;
+}
+
+.background {
+  position: relative;
+  overflow: hidden;
+  /* background-color: rgba(230, 237, 250, 0.879); */
+}
+
+.photo-left {
+  transform: rotate(45deg);
+  position: absolute;
+  left: -800px;
+  top: -100px;
+  width: 1000px;
+}
+
+.photo {
+  width: 500px;
+  /* height: 100vh; */
+  position: relative;
+}
+
+.photo::before {
+  content: " ";
+  /* background-color: rgba(230, 237, 250, 0.879); */
+  background-color: rgba(54, 56, 94, 0.543);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  z-index: 2;
+}
+
+.photo-right {
+  transform: rotate(-45deg);
+  position: absolute;
+  right: -800px;
+  top: -100px;
+  width: 1000px;
+}
+
+.container {
+  max-width: 800px;
+  height: 100vh;
+  margin: 10px auto;
+  text-align: center;
+  background-color: var(--darkblue-color);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.title {
+  font-size: 5em;
+  margin-bottom: 10px;
+  background-image: linear-gradient(
+    to right,
+    var(--sky-color),
+    var(--sky-color),
+    var(--gradient2),
+    var(--gradient1),
+    var(--darkblue-color)
+  );
+
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.description {
+  font-size: 2em;
+  margin-bottom: 5px;
+  color: var(--sky-color);
+  font-weight: bold;
+}
+
+.tagline {
+  font-size: 1.3em;
+  margin-bottom: 20px;
+  color: var(--sky-color);
+  font-weight: bold;
+}
+
+.watch-button {
+  background-color: var(--sky-color);
+  color: var(--darkblue-color);
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.watch-button::before {
+  content: " ";
+  background-image: linear-gradient(
+    to right,
+    var(--darkblue-color),
+    var(--gradient1),
+    var(--gradient2),
+    var(--sky-color)
+  );
+  border-radius: 5px;
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.3s;
+  z-index: -1;
+}
+
+.watch-button:hover::before {
+  width: 100%;
+}
+
+.watch-button:hover {
+  background-color: transparent;
+}
+
+.content {
+  margin-top: 50px;
+  /* text-align: left; */
+  color: var(--sky-color);
+  margin-left: 5%;
+  width: 480px;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  display: grid;
+  margin: 300px 50%;
+}
+.loader::before,
+.loader::after {
+  content: "";
+  grid-area: 1/1;
+  --c: no-repeat radial-gradient(farthest-side, var(--sky-color) 92%, #0000);
+  background: var(--c) 50% 0, var(--c) 50% 100%, var(--c) 100% 50%,
+    var(--c) 0 50%;
+  background-size: 12px 12px;
+  animation: l12 1s infinite;
+}
+.loader::before {
+  margin: 4px;
+  filter: hue-rotate(45deg);
+  background-size: 8px 8px;
+  animation-timing-function: linear;
+}
+
+@keyframes l12 {
+  100% {
+    transform: rotate(0.5turn);
+  }
+}
+
+.hidden {
+  opacity: 0;
+  transition: 1s;
+}
+
+.appear {
+  opacity: 1;
+}
+
+/* :root {
+  --mov-color: rgb(132, 56, 142);
+  --grey-color: rgb(218, 218, 218);
+  --sky-color: rgb(230, 237, 250);
+  --blue-color: rgb(108, 112, 184);
+  --darkblue-color: rgb(54, 56, 94);
+
+  --skydark: rgb(230, 237, 250);
+  --darkbluedark: rgb(54, 56, 94);
+
+  --bluebur: #20264dd2;
+
+  --gradient1: #5584ac;
+  --gradient2: #7fc7d9;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  color: var(--darkblue-color);
+}
+
+header {
+  background-image: url("header-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 36px;
+}
+
+h2 {
+  margin-top: 30px;
+  font-size: 24px;
+}
+
+p {
+  line-height: 1.6;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1 span {
+  background-image: linear-gradient(
+    to right,
+    var(--darkblue-color),
+    var(--gradient1),
+    var(--gradient2),
+    var(--sky-color)
+  );
+
+  background-size: 100%;
+  background-repeat: repeat;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  display: grid;
+  margin: 300px 50%;
+}
+.loader::before,
+.loader::after {
+  content: "";
+  grid-area: 1/1;
+  --c: no-repeat radial-gradient(farthest-side, var(--sky-color) 92%, #0000);
+  background: var(--c) 50% 0, var(--c) 50% 100%, var(--c) 100% 50%,
+    var(--c) 0 50%;
+  background-size: 12px 12px;
+  animation: l12 1s infinite;
+}
+.loader::before {
+  margin: 4px;
+  filter: hue-rotate(45deg);
+  background-size: 8px 8px;
+  animation-timing-function: linear;
+}
+
+@keyframes l12 {
+  100% {
+    transform: rotate(0.5turn);
+  }
+}
+
+.hidden {
+  opacity: 0;
+  transition: 1s;
+}
+
+.appear {
+  opacity: 1;
+} */

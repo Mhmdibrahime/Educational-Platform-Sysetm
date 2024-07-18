@@ -1,0 +1,190 @@
+:root {
+  --mov-color: rgb(132, 56, 142);
+  --grey-color: rgb(218, 218, 218);
+  --sky-color: rgb(230, 237, 250);
+  --blue-color: rgb(108, 112, 184);
+  --darkblue-color: rgb(54, 56, 94);
+
+  --skydark: rgb(230, 237, 250);
+  --darkbluedark: rgb(54, 56, 94);
+
+  --bluebur: #20264dd2;
+
+  --hover: rgba(54, 56, 94, 0.404);
+
+  --d: 2500ms;
+  --angle: 90deg;
+  --gradX: 100%;
+  --gradY: 50%;
+
+  --gradient1: #5584ac;
+  --gradient2: #7fc7d9;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  height: 100%;
+  margin: 20px auto;
+  background-color: var(--sky-color);
+  padding-left: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+}
+
+.image {
+  height: 700px;
+}
+
+.image img {
+  width: 564px;
+  height: 700px;
+}
+
+h1 {
+  text-align: center;
+  color: var(--darkblue-color);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: var(--darkblue-color);
+  font-size: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+  width: 90%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+select {
+  width: 93%;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--darkblue-color);
+  background-color: var(--darkblue-color);
+  color: var(--sky-color);
+}
+
+textarea {
+  width: 90%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  resize: vertical;
+}
+
+button[type="submit"] {
+  width: 93%;
+  background-color: var(--darkblue-color);
+  color: var(--sky-color);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 25px;
+  transition: background-color 0.3s;
+  position: relative;
+  z-index: 2;
+}
+
+button[type="submit"]::before {
+  content: " ";
+  width: 0;
+  height: 100%;
+  background-image: linear-gradient(
+    to right,
+    var(--darkblue-color),
+    var(--gradient1),
+    var(--gradient2),
+    var(--sky-color)
+  );
+  border-radius: 5px;
+  transition: 0.3s;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+button[type="submit"]:hover::before {
+  width: 100%;
+}
+
+button[type="submit"]:hover {
+  background-color: transparent;
+}
+
+@media (max-width: 1150px) {
+  .image {
+    display: none;
+  }
+  .content {
+    padding-bottom: 20px;
+  }
+}
+
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  display: grid;
+  margin: 300px 50%;
+}
+.loader::before,
+.loader::after {
+  content: "";
+  grid-area: 1/1;
+  --c: no-repeat radial-gradient(farthest-side, var(--sky-color) 92%, #0000);
+  background: var(--c) 50% 0, var(--c) 50% 100%, var(--c) 100% 50%,
+    var(--c) 0 50%;
+  background-size: 12px 12px;
+  animation: l12 1s infinite;
+}
+.loader::before {
+  margin: 4px;
+  filter: hue-rotate(45deg);
+  background-size: 8px 8px;
+  animation-timing-function: linear;
+}
+
+@keyframes l12 {
+  100% {
+    transform: rotate(0.5turn);
+  }
+}
+
+.hidden {
+  opacity: 0;
+  transition: 1s;
+}
+
+.appear {
+  background-color: var(--sky-color);
+  opacity: 1;
+}

@@ -1,0 +1,263 @@
+:root {
+  --mov-color: rgb(132, 56, 142);
+  --grey-color: rgb(218, 218, 218);
+  --sky-color: rgb(230, 237, 250);
+  --blue-color: rgb(108, 112, 184);
+  --darkblue-color: rgb(54, 56, 94);
+
+  --skydark: rgb(230, 237, 250);
+  --darkbluedark: rgb(54, 56, 94);
+
+  --bluebur: #20264dd2;
+
+  --hover: rgba(54, 56, 94, 0.404);
+
+  --d: 2500ms;
+  --angle: 90deg;
+  --gradX: 100%;
+  --gradY: 50%;
+
+  --gradient1: #5584ac;
+  --gradient2: #7fc7d9;
+}
+
+.dark {
+  --sky-color: rgb(54, 56, 94);
+  --darkblue-color: rgb(230, 237, 250);
+  --hover: rgba(230, 237, 250, 0.5);
+
+  --gradient2: #5584ac;
+  --gradient1: #7fc7d9;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--darkblue-color);
+}
+
+.container {
+  width: 80%;
+  margin: 20px auto;
+  background-color: var(--sky-color);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 18px;
+}
+
+th,
+td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+th {
+  background-color: var(--darkblue-color);
+  color: var(--sky-color);
+}
+
+tr {
+  cursor: pointer;
+  color: var(--darkblue-color);
+  transition: 0.2s;
+}
+
+tr:hover {
+  background-color: var(--hover);
+}
+
+.col {
+  font-weight: bold;
+}
+
+.profile-image {
+  width: 150px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.profile p {
+  margin: 5px 0;
+  font-size: 18px;
+  color: var(--darkblue-color);
+}
+
+.profile-image {
+  width: 150px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.profile .data {
+  margin-left: 30px;
+  font-size: 16px;
+  color: var(--darkblue-color);
+  grid-column: 2;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 40px;
+  position: relative;
+}
+
+.icon img {
+  width: 30px;
+  cursor: pointer;
+}
+
+.moon {
+  margin-top: -15px;
+}
+
+.icon input {
+  border: none;
+  width: 150px;
+  padding: 10px 33px;
+  border-radius: 10px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.icon img:nth-child(1) {
+  width: 20px;
+  position: absolute;
+  left: 10px;
+}
+
+.icon input:focus {
+  outline: none;
+}
+
+.data .icon {
+  display: none;
+}
+
+.log-out {
+  border: none;
+  background-color: var(--darkblue-color);
+  color: var(--sky-color);
+  padding: 10px;
+  border-radius: 10px;
+  position: relative;
+  transition: 0.3s;
+  z-index: 3;
+  margin-top: -15px;
+  margin-left: 15px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.log-out::before {
+  content: " ";
+  width: 0;
+  height: 100%;
+  border-radius: 10px;
+  background-image: linear-gradient(
+    to right,
+    var(--darkblue-color),
+    var(--gradient1),
+    var(--gradient2),
+    var(--sky-color)
+  );
+  transition: 0.3s;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.log-out:hover::before {
+  width: 100%;
+}
+
+.log-out:hover {
+  background-color: transparent;
+}
+
+@media (max-width: 768px) {
+  .icon {
+    display: none;
+  }
+  .data .icon {
+    display: flex;
+  }
+  .profile p {
+    font-size: 16px;
+  }
+  table {
+    margin-top: 40px;
+  }
+  .log-out {
+    margin-top: -5px;
+  }
+}
+
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  display: grid;
+  margin: 300px 50%;
+}
+.loader::before,
+.loader::after {
+  content: "";
+  grid-area: 1/1;
+  --c: no-repeat radial-gradient(farthest-side, var(--sky-color) 92%, #0000);
+  background: var(--c) 50% 0, var(--c) 50% 100%, var(--c) 100% 50%,
+    var(--c) 0 50%;
+  background-size: 12px 12px;
+  animation: l12 1s infinite;
+}
+.loader::before {
+  margin: 4px;
+  filter: hue-rotate(45deg);
+  background-size: 8px 8px;
+  animation-timing-function: linear;
+}
+
+@keyframes l12 {
+  100% {
+    transform: rotate(0.5turn);
+  }
+}
+
+.hidden {
+  opacity: 0;
+  transition: 1s;
+}
+
+.appear {
+  background-color: var(--sky-color);
+  opacity: 1;
+}
